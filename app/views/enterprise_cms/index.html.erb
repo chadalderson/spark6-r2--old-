@@ -1,0 +1,166 @@
+<%= render '/includes/services_menu' %>
+
+<section id="content">
+	<!-- visual -->
+	<div class="visual">
+		<div data-picture data-alt = "image description" >
+			<div data-src = "/assets/img-14.jpg" ></div>
+			<div data-src = "/assets/img-14-medium.jpg" data-media = "(max-width:940px)" ></div>
+			<div data-src = "/assets/img-14-medium2x.jpg" data-media = "(max-width:940px) and (-webkit-min-device-pixel-ratio:1.5), (max-width:940px) and (min-resolution:144dpi)" ></div>
+			<div data-src = "/assets/img-14-small.jpg" data-media = "(max-width:640px)" ></div>
+			<div data-src = "/assets/img-14-small2x.jpg" data-media = "(max-width:640px) and (-webkit-min-device-pixel-ratio:1.5), (max-width:640px) and (min-resolution:144dpi)" ></div>
+			<!--[if (lt IE 9) & (!IEMobile)]>
+			<div data-src="/assets/img-14.jpg"></div>
+			<![endif]-->
+			<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+			<noscript><%= image_tag("img-14.jpg", alt: "image description", size: "712x243") %></noscript>
+		</div> 
+		<h1>MENTERPRISE CMS</h1>
+		<span class="icon icon-04">icon</span>
+	</div>
+	<!-- block-introduction -->
+	<section class="block-introduction">
+		<h1>Control Everything.</h1>
+		<p>Suspendisse potenti. Nulla volutpat ultrices pulvinar. Phasellus et interdum quam. Aliquam ut sem justo, et faucibus augue. Fusce auctor, felis ac placerat mollis, lacus enim malesuada mi, ullamcorper facilisis est arcu nec tortor. Integer euismod, risus sit amet eleifend fermentum sit amet auctor mi quam.</p>
+	</section> 
+	<!-- list-products -->
+	<ul class="list-products">
+		<li>
+			<h2 class="icon-13">DRUPAL</h2>
+			<p>Suspendisse potenti. Nulla volutpat ultrices pulvinar. Phasellus et interdum quam. Aliquam ut sem justo, et faucibus augue. Fusce auctor, felis ac placerat mollis, lacus enim malesuada.</p>
+		</li>
+		<li>
+			<h2 class="icon-14">MAGENTO</h2>
+			<p>Suspendisse potenti. Nulla volutpat ultrices pulvinar. Phasellus et interdum quam. Aliquam ut sem justo, et faucibus augue. Fusce auctor, felis ac placerat mollis, lacus enim malesuada.</p>
+		</li>
+		<li>
+			<h2 class="icon-15">RUBY ON RAILS</h2>
+			<p>Suspendisse potenti. Nulla volutpat ultrices pulvinar. Phasellus et interdum quam. Aliquam ut sem justo, et faucibus augue. Fusce auctor, felis ac placerat mollis, lacus enim malesuada.</p>
+		</li>
+		<li>
+			<h2 class="icon-16">ZEND</h2>
+			<p>Suspendisse potenti. Nulla volutpat ultrices pulvinar. Phasellus et interdum quam. Aliquam ut sem justo, et faucibus augue. Fusce auctor, felis ac placerat mollis, lacus enim malesuada.</p>
+		</li>
+	</ul>
+	<!-- list-customers -->
+	<div class="list-customers">
+		<h1>Happy Customers.</h1>
+		<div class="holder">
+			<article class="block">
+				<div class="img-holder"><a href="#"><%= image_tag("img-10.jpg", alt: "image description") %></a></div>
+				<h2>John Blaze</h2>
+				<span class="position">CEO at Dollar Shave Club</span>
+				<p>Suspendisse potenti. Nulla volutpat ultrices pulvinar. Phasellus et interdum quam. Aliquam ut sem justo, et faucibus augue. Fusce auctor, felis ac placerat mollis, lacus enim malesuada.</p>
+			</article>
+			<article class="block">
+				<div class="img-holder"><a href="#"><%= image_tag("img-11.jpg", alt: "image description") %></a></div>
+				<h2>Jessica Foxbury</h2>
+				<span class="position">Director of Product Design at At&amp;t</span>
+				<p>Suspendisse potenti. Nulla volutpat ultrices pulvinar. Phasellus et interdum quam. Aliquam ut sem justo, et faucibus augue. Fusce auctor, felis ac placerat mollis, lacus enim malesuada.</p>
+			</article>
+		</div>
+	</div>
+	<!-- control-services -->
+	<div class="control-services">
+		<h1>More Great Services.</h1>
+		<!-- list-services -->
+		<ul class="list-services small">
+			<li>
+				<div data-picture data-alt = "image description" >
+					<div data-src = "/assets/img-03.jpg" ></div>
+					<div data-src = "/assets/img-03-small-medium.jpg" data-media = "(max-width:940px)" ></div>
+					<div data-src = "/assets/img-03-small-medium2x.jpg" data-media = "(max-width:940px) and (-webkit-min-device-pixel-ratio:1.5), (max-width:940px) and (min-resolution:144dpi)" ></div>
+					<div data-src = "/assets/img-03-mobile-small.jpg" data-media = "(max-width:640px)" ></div>
+					<div data-src = "/assets/img-03-mobile-small2x.jpg" data-media = "(max-width:640px) and (-webkit-min-device-pixel-ratio:1.5), (max-width:640px) and (min-resolution:144dpi)" ></div>
+					<!--[if (lt IE 9) & (!IEMobile)]>
+					<div data-src="/assets/img-03.jpg"></div>
+					<![endif]-->
+					<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+					<noscript><%= image_tag("img-03.jpg", alt: "image description", size: "351x190") %></noscript>
+				</div> 
+				<div class="content"><strong class="title">MOBILE FIRST</strong></div>
+				<div class="rollover"><a href="#" class="more icon-01">Learn More</a></div>
+			</li>
+			<li class="active">
+				<div data-picture data-alt = "image description" >
+					<div data-src = "/assets/img-04.jpg" ></div>
+					<div data-src = "/assets/img-04-small-medium.jpg" data-media = "(max-width:940px)" ></div>
+					<div data-src = "/assets/img-04-small-medium2x.jpg" data-media = "(max-width:940px) and (-webkit-min-device-pixel-ratio:1.5), (max-width:940px) and (min-resolution:144dpi)" ></div>
+					<div data-src = "/assets/img-04-mobile-small.jpg" data-media = "(max-width:640px)" ></div>
+					<div data-src = "/assets/img-04-mobile-small2x.jpg" data-media = "(max-width:640px) and (-webkit-min-device-pixel-ratio:1.5), (max-width:640px) and (min-resolution:144dpi)" ></div>
+					<!--[if (lt IE 9) & (!IEMobile)]>
+					<div data-src="/assets/img-04.jpg"></div>
+					<![endif]-->
+					<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+					<noscript><%= image_tag("img-04.jpg", alt: "image description", size: "351x190") %></noscript>
+				</div> 
+				<div class="content"><strong class="title">ENTERPRISE CMS</strong></div>
+				<div class="rollover"><a href="#" class="more icon-02">Learn More</a></div>
+			</li>
+			<li>
+				<div data-picture data-alt = "image description" >
+					<div data-src = "/assets/img-05.jpg" ></div>
+					<div data-src = "/assets/img-05-small-medium.jpg" data-media = "(max-width:940px)" ></div>
+					<div data-src = "/assets/img-05-small-medium2x.jpg" data-media = "(max-width:940px) and (-webkit-min-device-pixel-ratio:1.5), (max-width:940px) and (min-resolution:144dpi)" ></div>
+					<div data-src = "/assets/img-05-mobile-small.jpg" data-media = "(max-width:640px)" ></div>
+					<div data-src = "/assets/img-05-mobile-small2x.jpg" data-media = "(max-width:640px) and (-webkit-min-device-pixel-ratio:1.5), (max-width:640px) and (min-resolution:144dpi)" ></div>
+					<!--[if (lt IE 9) & (!IEMobile)]>
+					<div data-src="/assets/img-05.jpg"></div>
+					<![endif]-->
+					<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+					<noscript><%= image_tag("img-05.jpg", alt: "image description", size: "351x190") %></noscript>
+				</div> 
+				<div class="content"><strong class="title">USER EXPERIENCE</strong></div>
+				<div class="rollover"><a href="#" class="more icon-03">Learn More</a></div>
+			</li>
+			<li>
+				<div data-picture data-alt = "image description" >
+					<div data-src = "/assets/img-06.jpg" ></div>
+					<div data-src = "/assets/img-06-small-medium.jpg" data-media = "(max-width:940px)" ></div>
+					<div data-src = "/assets/img-06-small-medium2x.jpg" data-media = "(max-width:940px) and (-webkit-min-device-pixel-ratio:1.5), (max-width:940px) and (min-resolution:144dpi)" ></div>
+					<div data-src = "/assets/img-06-mobile-small.jpg" data-media = "(max-width:640px)" ></div>
+					<div data-src = "/assets/img-06-mobile-small2x.jpg" data-media = "(max-width:640px) and (-webkit-min-device-pixel-ratio:1.5), (max-width:640px) and (min-resolution:144dpi)" ></div>
+					<!--[if (lt IE 9) & (!IEMobile)]>
+					<div data-src="/assets/img-06.jpg"></div>
+					<![endif]-->
+					<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+					<noscript><%= image_tag("img-06.jpg", alt: "image description", size: "351x190") %></noscript>
+				</div> 
+				<div class="content"><strong class="title">ENTERPRISE GAMEIFICATION</strong></div>
+				<div class="rollover"><a href="#" class="more icon-04">Learn More</a></div>
+			</li>
+			<li>
+				<div data-picture data-alt = "image description" >
+					<div data-src = "/assets/img-07.jpg" ></div>
+					<div data-src = "/assets/img-07-small-medium.jpg" data-media = "(max-width:940px)" ></div>
+					<div data-src = "/assets/img-07-small-medium2x.jpg" data-media = "(max-width:940px) and (-webkit-min-device-pixel-ratio:1.5), (max-width:940px) and (min-resolution:144dpi)" ></div>
+					<div data-src = "/assets/img-07-mobile-small.jpg" data-media = "(max-width:640px)" ></div>
+					<div data-src = "/assets/img-07-mobile-small2x.jpg" data-media = "(max-width:640px) and (-webkit-min-device-pixel-ratio:1.5), (max-width:640px) and (min-resolution:144dpi)" ></div>
+					<!--[if (lt IE 9) & (!IEMobile)]>
+					<div data-src="/assets/img-07.jpg"></div>
+					<![endif]-->
+					<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+					<noscript><%= image_tag("img-07.jpg", alt: "image description", size: "351x190") %></noscript>
+				</div> 
+				<div class="content"><strong class="title">DIGITAL MARKETING</strong></div>
+				<div class="rollover"><a href="#" class="more icon-05">Learn More</a></div>
+			</li>
+			<li>
+				<div data-picture data-alt = "image description" >
+					<div data-src = "/assets/img-08.jpg" ></div>
+					<div data-src = "/assets/img-08-small-medium.jpg" data-media = "(max-width:940px)" ></div>
+					<div data-src = "/assets/img-08-small-medium2x.jpg" data-media = "(max-width:940px) and (-webkit-min-device-pixel-ratio:1.5), (max-width:940px) and (min-resolution:144dpi)" ></div>
+					<div data-src = "/assets/img-08-mobile-small.jpg" data-media = "(max-width:640px)" ></div>
+					<div data-src = "/assets/img-08-mobile-small2x.jpg" data-media = "(max-width:640px) and (-webkit-min-device-pixel-ratio:1.5), (max-width:640px) and (min-resolution:144dpi)" ></div>
+					<!--[if (lt IE 9) & (!IEMobile)]>
+					<div data-src="/assets/img-08.jpg"></div>
+					<![endif]-->
+					<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+					<noscript><%= image_tag("img-08.jpg", alt: "image description", size: "351x190") %></noscript>
+				</div> 
+				<div class="content"><strong class="title">VIDEO PRODUCTION</strong></div>
+				<div class="rollover"><a href="#" class="more icon-06">Learn More</a></div>
+			</li>
+		</ul>
+	</div>
+</section>

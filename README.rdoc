@@ -1,0 +1,11 @@
+== What
+
+This is the rails install for Spark6 2.0.
+
+== When
+
+The github project this is hosted on has been migrated from Codebase on 7/14/2013. Any previous commits can be found on the original Codebase project. 
+
+== Who
+
+Please contact greg@spark6.com if you have any questions or concerns.

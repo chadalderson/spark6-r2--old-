@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Spark6.com</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <script type="text/javascript" src="//use.typekit.net/jgg4bxu.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1;" />
+  <meta name = "format-detection" content = "telephone=no" />
+  <!--[if IE]><script type="text/javascript" src="js/ie.js"></script><![endif]-->
+  <!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="css/ie.css" /><![endif]-->
+  <%= yield :head %>
+  
+</head>
+<body>
+  <div class="wrap">
+    <div id="wrapper">
+      <div class="w1">
+    	  <%= render '/includes/header' %>
+    	  <%= yield %>
+      </div><!-- w1 -->
+    	  <%= render '/includes/footer' %>
+    </div><!-- wrapper -->
+  </div><!-- wrap -->
+</body>
+</html>
