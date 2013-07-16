@@ -64,7 +64,13 @@ input[type = "text"] {-webkit-border-radius: 0;}
 /* header */
 #header{
 	height:158px;
-	position:relative;
+	position:fixed;
+	top: 0;
+	left: 0;
+	z-index: 10000000;
+	width: 100%;
+	background-color: #f4f4f4;
+	margin: 0 auto;
 }
 #header .logo {
 	background:url(/assets/logo.png) no-repeat;
@@ -163,6 +169,9 @@ input[type = "text"] {-webkit-border-radius: 0;}
 #header.visual .sub-logo{display:block;}
 #header.visual .navigation{display:block;}
 /* video-holder */
+#content {
+  margin-top: 158px;
+}
 #content .video-holder{position:relative;}
 #content .video-holder img{
 	display:block;
