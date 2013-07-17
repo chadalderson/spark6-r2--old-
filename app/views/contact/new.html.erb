@@ -18,19 +18,19 @@
 	</div>
 	<!-- contact-holder -->
 	<div class="contact-holder">
-		<!-- form-send -->
-		<form action="#" class="form-send" >
-			<fieldset>
-				<input type="text" placeholder="Your Name" />
-				<input type="email" placeholder="Email Address" />
-				<input class="none" type="text" placeholder="Company" />
-				<input class="none" type="text" placeholder="Website" />
-				<input class="none" type="text" placeholder="Phone" />
-				<textarea cols="3" rows="1" placeholder="Message"></textarea>
-				<input type="submit" value="SUBMIT" />
-				<span class="note">Unlock the <strong>First Contact</strong> Achievement!</span>
-			</fieldset>
-		</form>
+		<!-- form-send -->		
+		<%= form_for @message, url: contact_path, html: {class: "form-send"} do |form| %>
+		  <fieldset>  
+        <%= form.text_field :name, type: "text", placeholder: "Your Name" %>
+        <%= form.text_field :email, type: "email", placeholder: "Email Address" %>
+        <%= form.text_field :company, type: "text", class: "none", placeholder: "Company" %>
+        <%= form.text_field :website, type: "text", class: "none", placeholder: "Website" %>
+        <%= form.text_field :phone, type: "text", class: "none", placeholder: "Phone" %>
+        <%= form.text_area :message, cols: "3", rows: "1", placeholder: "Message" %>
+        <%= form.submit "SUBMIT" %>
+        <span class="note">Unlock the <strong>First Contact</strong> Achievement!</span>
+		  </fieldset>
+		<% end %>
 		<!-- contact -->
 		<div class="contact">
 			<div class="map-holder">
@@ -189,28 +189,3 @@
 		</ul>
 	</div>
 </section>
-
-<%= form_for @message, :url => contact_path do |form| %>
-  <fieldset class="contact-form">
-    <div>
-      <%= form.label :name %>
-      <%= form.text_field :name %>
-    </div>
-    <div>
-      <%= form.label :email %>
-      <%= form.text_field :email %>
-    </div>
-    <div>
-      <%= form.label :subject %>
-      <%= form.text_field :subject %>
-    </div>
-    <div>
-      <%= form.label :body %>
-      <%= form.text_area :body %>
-    </div>
-  </fieldset><!-- contact-form -->
-
-  <fieldset>
-    <%= form.submit "Send" %>
-  </fieldset>
-<% end %>

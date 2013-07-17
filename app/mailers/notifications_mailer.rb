@@ -5,7 +5,7 @@ class NotificationsMailer < ActionMailer::Base
 
 	def new_message(message)
 		@message = message
-		mail(:subject => "spark6 #{message.subject}")
+		mail(:subject => "Contact Request from #{message.name}")
 	end
 
 end

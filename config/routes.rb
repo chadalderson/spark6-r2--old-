@@ -14,7 +14,7 @@ S62::Application.routes.draw do
 
   get 'instagram/callback'       => 'instagram#callback'
 
-  post 'contact'                 => 'contact#create',                as: 'contact', :via => :post
+  post 'contact'                 => 'contact#create',                as: 'contact'
 
   root to: 'home#index'
 end

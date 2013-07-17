@@ -8,10 +8,10 @@ class Message
 	extend ActiveModel::Naming
 	
 	# assigns reader and writer methods
-	attr_accessor :name, :email, :subject, :body
+	attr_accessor :name, :email, :company, :website, :phone, :message
 	
 	# validation requirements
-	validates :name, :email, :subject, :body, :presence => true
+	validates :name, :email, :phone, :message, :presence => true
 	validates :email, :format => { :with => %r{.+@.+\..+} }, :allow_blank => true
 	
 	# sends name and value

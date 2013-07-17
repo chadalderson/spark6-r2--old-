@@ -319,13 +319,13 @@ $(document).ready(function (){
     nav = $('.navigation');
     
     $('#header').mouseenter(function(){  
-      logo.stop().animate({top: '-7%'}, 500);
-      nav.stop().fadeIn(500);   
+      logo.stop().animate({top: '-7%'}, 250);
+      nav.stop().fadeIn(250);   
   
     });
     $('#header').mouseleave(function(){
-      logo.stop().animate({top: '50%'}, 500);
-      nav.stop().fadeOut(500);
+      logo.stop().animate({top: '50%'}, 250);
+      nav.stop().fadeOut(250);
     });
   }
 
