@@ -7,15 +7,14 @@ S62::Application.routes.draw do
   get  'user/experience'         => 'user_experience#index',         as: :user_experience_index
   get  'enterprise-cms'          => 'enterprise_cms#index',          as: :enterprise_cms_index
   get  'mobile'                  => 'mobile#index',                  as: :mobile_index
-  #get  'contact'                 => 'contact#index',                 as: :contact_index
+  get  'contact'                 => 'contact#new',                   as: :contact_index
   get  'about'                   => 'about#index',                   as: :about_index
   get  'work'                    => 'work#index',                    as: :work_index
   get  'digital-marketing'       => 'digital_marketing#index',       as: :digital_marketing_index
 
-  get 'instagram/callback' => 'instagram#callback'
+  get 'instagram/callback'       => 'instagram#callback'
 
-  match 'contact' => 'contact#new', :as => 'contact', :via => :get
-  match 'contact' => 'contact#create', :as => 'contact', :via => :post
+  post 'contact'                 => 'contact#create',                as: 'contact', :via => :post
 
   root to: 'home#index'
 end
