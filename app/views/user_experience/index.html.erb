@@ -47,7 +47,7 @@
 		<h1>Happy Customers.</h1>
 		<div class="holder">
 			<article class="block">
-				<div class="img-holder"><a href="#"><%= image_tag("img-10.jpg", alt: "image description", size: "351x190") %></a></div>
+				<div class="img-holder"><a href="#"><%= image_tag("img-10.jpg", alt: "image description") %></a></div>
 				<h2>John Blaze</h2>
 				<span class="position">CEO at Dollar Shave Club</span>
 				<p>Suspendisse potenti. Nulla volutpat ultrices pulvinar. Phasellus et interdum quam. Aliquam ut sem justo, et faucibus augue. Fusce auctor, felis ac placerat mollis, lacus enim malesuada.</p>
@@ -79,7 +79,7 @@
 					<noscript><%= image_tag("img-03.jpg", alt: "image description", size: "351x190") %></noscript>
 				</div> 
 				<div class="content"><strong class="title">MOBILE FIRST</strong></div>
-				<div class="rollover"><a href="#" class="more icon-01">Learn More</a></div>
+				<div class="rollover"><%= link_to 'Learn More', mobile_index_path, class: 'more icon-01' %></div>
 			</li>
 			<li>
 				<div data-picture data-alt = "image description" >
@@ -95,7 +95,7 @@
 					<noscript><%= image_tag("img-04.jpg", alt: "image description", size: "351x190") %></noscript>
 				</div> 
 				<div class="content"><strong class="title">ENTERPRISE CMS</strong></div>
-				<div class="rollover"><a href="#" class="more icon-02">Learn More</a></div>
+				<div class="rollover"><%= link_to 'Learn More', enterprise_cms_index_path, class: 'more icon-02' %></div>
 			</li>
 			<li class="active">
 				<div data-picture data-alt = "image description" >
@@ -111,7 +111,7 @@
 					<noscript><%= image_tag("img-05.jpg", alt: "image description", size: "351x190") %></noscript>
 				</div>
 				<div class="content"><strong class="title">USER EXPERIENCE</strong></div>
-				<div class="rollover"><a href="#" class="more icon-03">Learn More</a></div>
+				<div class="rollover"><%= link_to 'Learn More', user_experience_index_path, class: 'more icon-03' %></div>
 			</li>
 			<li>
 				<div data-picture data-alt = "image description" >
@@ -126,8 +126,8 @@
 					<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
 					<noscript><%= image_tag("img-06.jpg", alt: "image description", size: "351x190") %></noscript>
 				</div> 
-				<div class="content"><strong class="title">ENTERPRISE GAMEIFICATION</strong></div>
-				<div class="rollover"><a href="#" class="more icon-04">Learn More</a></div>
+				<div class="content"><strong class="title">ENTERPRISE GAMIFICATION</strong></div>
+				<div class="rollover"><%= link_to 'Learn More', enterprise_gamification_index_path, class: 'more icon-04' %></div>
 			</li>
 			<li>
 				<div data-picture data-alt = "image description" >
@@ -143,7 +143,7 @@
 					<noscript><%= image_tag("img-07.jpg", alt: "image description", size: "351x190") %></noscript>
 				</div> 
 				<div class="content"><strong class="title">DIGITAL MARKETING</strong></div>
-				<div class="rollover"><a href="#" class="more icon-05">Learn More</a></div>
+				<div class="rollover"><%= link_to 'Learn More', digital_marketing_index_path, class: 'more icon-05' %></div>
 			</li>
 			<li>
 				<div data-picture data-alt = "image description" >
@@ -159,7 +159,7 @@
 					<noscript><%= image_tag("img-08.jpg", alt: "image description", size: "351x190") %></noscript>
 				</div> 
 				<div class="content"><strong class="title">VIDEO PRODUCTION</strong></div>
-				<div class="rollover"><a href="#" class="more icon-06">Learn More</a></div>
+				<div class="rollover"><%= link_to 'Learn More', video_production_index_path, class: 'more icon-06' %></div>
 			</li>
 		</ul>
 	</div>
