@@ -12,3 +12,5 @@
 /tmp/pids/server.pid
 /app/.DS_Store
 /.DS_Store
+/spec/.DS_Store
+/config/.DS_Store
