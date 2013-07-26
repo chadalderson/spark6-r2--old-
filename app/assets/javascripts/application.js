@@ -329,5 +329,38 @@ $(document).ready(function (){
     });
   }
 
+  hoverBtn = function(){
+    var speed = 250;
+  	var itemsNav = $('.contact .social > li');
+  	
+  	itemsNav.each(function(){
+  		var item = $(this);
+  		var bgBox = item.find('.bg-hover');
+  		
+  		if (bgBox.length) {
+  			var boxHeight = bgBox.height();
+  			bgBox.css('top',-boxHeight);
+  			item.hover(function(){
+  				bgBox.stop().animate({
+  					top: 0
+  				}, {
+  					queue: false,
+  					duration: speed,
+  					easing: 'linear'
+  				})
+  			}, function(){
+  				bgBox.stop().animate({
+  					top: -boxHeight
+  				}, {
+  					queue: false,
+  					duration: speed,
+  					easing: 'linear'
+  				})
+  			});
+  		}
+  	});
+  }
+  
   navShow();
+  hoverBtn();
 });

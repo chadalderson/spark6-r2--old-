@@ -965,6 +965,16 @@ input
       display: inline-block
       vertical-align: top
       margin-right: 36px
+      position: relative
+      overflow: hidden
+      .bg-hover
+        position: absolute
+        top: -71xpx
+        left: 0
+        height: 71px
+        width: 100%
+        background: #fff
+        z-index: 2
     a
       display: block
       border: 2px solid #fff
@@ -973,14 +983,13 @@ input
       overflow: hidden
       width: 66px
       height: 66px
+      z-index: 10000
       &:after
         background: url('/assets/sprite.png') no-repeat 0 -9999px
         left: 19px
         top: 17px
         content: ''
         position: absolute
-      &:hover
-        background: #fff
     .linkedin
       &:after
         background-position: -571px -230px
