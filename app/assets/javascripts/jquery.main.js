@@ -302,16 +302,27 @@ $(document).ready(function (){
   navShow = function(){
     logo = $('.logo');
     nav = $('.navigation');
+    header = $('#header');
+    opener = $('.opener');
     
-    $('#header').mouseenter(function(){  
-      logo.stop().animate({top: '-7%'}, 250);
-      nav.stop().fadeIn(250);   
-  
-    });
-    $('#header').mouseleave(function(){
-      logo.stop().animate({top: '50%'}, 250);
-      nav.stop().fadeOut(250);
-    });
+    if(opener.css('display') == 'none'){
+      header.mouseenter(function(){  
+        logo.stop().animate({top: '-7%'}, 250);
+        nav.stop().fadeIn(250);   
+      });
+      header.mouseleave(function(){
+        logo.stop().animate({top: '50%'}, 250);
+        nav.stop().fadeOut(250);
+      });
+    } else if (opener.css('display') == 'block') {
+      opener.click(function(){
+        if(header.hasClass('open')){
+          header.removeClass('open');
+        } else {
+          header.addClass('open');
+        }
+      });
+    } 
   }
 
   hoverBtn = function(){
@@ -345,6 +356,8 @@ $(document).ready(function (){
   		}
   	});
   }
+  
+  
   
   navShow();
   hoverBtn();
