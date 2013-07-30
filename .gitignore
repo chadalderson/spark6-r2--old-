@@ -14,3 +14,5 @@
 /.DS_Store
 /spec/.DS_Store
 /config/.DS_Store
+.DS_Store
+/app/assets/.DS_Store
