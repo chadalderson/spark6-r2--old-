@@ -305,6 +305,7 @@ $(document).ready(function (){
     header = $('#header');
     opener = $('.opener');
     
+    //header animation on hover only if the open button is not visible (breakpoint dependant)
     if(opener.css('display') == 'none'){
       header.mouseenter(function(){  
         logo.stop().animate({top: '-7%'}, 250);
@@ -314,6 +315,7 @@ $(document).ready(function (){
         logo.stop().animate({top: '50%'}, 250);
         nav.stop().fadeOut(250);
       });
+    //if open button is visible, remove or add class 'open' on click
     } else if (opener.css('display') == 'block') {
       opener.click(function(){
         if(header.hasClass('open')){
@@ -329,13 +331,19 @@ $(document).ready(function (){
     var speed = 250;
   	var itemsNav = $('.contact .social > li');
   	
+  	//for each item with 'bg-hover' in itemsNav
   	itemsNav.each(function(){
   		var item = $(this);
   		var bgBox = item.find('.bg-hover');
   		
+  		//if item exists
   		if (bgBox.length) {
   			var boxHeight = bgBox.height();
+  			
+  			//get box height
   			bgBox.css('top',-boxHeight);
+  			
+  			//on hover, reduce height and animate
   			item.hover(function(){
   				bgBox.stop().animate({
   					top: 0
@@ -344,6 +352,7 @@ $(document).ready(function (){
   					duration: speed,
   					easing: 'linear'
   				})
+  				 //reverse on mouse-out
   			}, function(){
   				bgBox.stop().animate({
   					top: -boxHeight
