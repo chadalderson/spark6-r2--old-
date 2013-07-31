@@ -791,8 +791,6 @@ input
       padding: 0
       border: none
       margin-left: 23px
-      &:hover
-        background-position: -523px -143px
     .icon-01:after
       left: 32px
       top: 26px
@@ -811,6 +809,20 @@ input
     .icon-06:after
       left: 29px
       top: 32px
+    .more:hover:after
+      background: url('/assets/sprite-list-services.png') no-repeat 0 -9999px
+    .icon-01:hover:after
+      background-position: 0 0
+    .icon-02:hover:after
+      background-position: -29px 0
+    .icon-03:hover:after
+      background-position: -62px 0
+    .icon-04:hover:after
+      background-position: -93px 0
+    .icon-05:hover:after
+      background-position: -122px 0
+    .icon-06:hover:after
+      background-position: -149px 0
 
 /* contact-holder
 
@@ -2230,38 +2242,53 @@ input
         &:hover
           background: url('/assets/sprite-table@2x.png') no-repeat 0 -418px
           background-size: 500px 652px
+          &:after
+            background-position: 0 0
         background: url('/assets/sprite-table@2x.png') no-repeat 0 -418px
         background-size: 500px 652px
       .icon-02
         &:hover
           background: url('/assets/sprite-table@2x.png') no-repeat -121px -418px
           background-size: 500px 652px
+          &:after
+            background-position: -29px 0
         background: url('/assets/sprite-table@2x.png') no-repeat -121px -418px
         background-size: 500px 652px
       .icon-03
         &:hover
           background: url('/assets/sprite-table@2x.png') no-repeat -243px -418px
           background-size: 500px 652px
+          &:after
+            background-position: -62px 0
         background: url('/assets/sprite-table@2x.png') no-repeat -243px -418px
         background-size: 500px 652px
       .icon-04
         &:hover
           background: url('/assets/sprite-table@2x.png') no-repeat -366px -418px
           background-size: 500px 652px
+          &:after
+            background-position: -93px 0
         background: url('/assets/sprite-table@2x.png') no-repeat -366px -418px
         background-size: 500px 652px
       .icon-05
         &:hover
           background: url('/assets/sprite-table@2x.png') no-repeat 0 -541px
           background-size: 500px 652px
+          &:after
+            background-position: -122px 0
         background: url('/assets/sprite-table@2x.png') no-repeat 0 -541px
         background-size: 500px 652px
       .icon-06
         &:hover
           background: url('/assets/sprite-table@2x.png') no-repeat -121px -541px
           background-size: 500px 652px
+          &:after
+            background-position: -149px 0
         background: url('/assets/sprite-table@2x.png') no-repeat -121px -541px
         background-size: 500px 652px
+      .more
+        &:hover:after
+          background: url('/assets/sprite-list-services.png') no-repeat 0 -9999px
     .rollover
       .icon-01
         &:hover
