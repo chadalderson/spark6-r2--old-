@@ -300,10 +300,10 @@ PlatformDetect.addRule({type: 'winphone', version: 8, css: 'winphone.css'});
 $(document).ready(function (){
   
   navShow = function(){
-    logo = $('.logo');
-    nav = $('.navigation');
-    header = $('#header');
-    opener = $('.opener');
+    var logo = $('.logo');
+    var nav = $('.navigation');
+    var header = $('#header');
+    var opener = $('.opener');
     
     //header animation on hover only if the open button is not visible (breakpoint dependant)
     if(opener.css('display') == 'none'){
