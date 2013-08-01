@@ -1520,10 +1520,13 @@ input
       position: static
       nav
         display: none
+    &.open .navigation nav
+      display: block
   #nav
-    display: table
+    display: table !important
     width: 100%
     background: #eb2c00
+    table-layout: fixed
     li
       display: table-cell
       a
