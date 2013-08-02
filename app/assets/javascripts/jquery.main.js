@@ -301,30 +301,48 @@ $(document).ready(function (){
   
   navShow = function(){
     var logo = $('.logo');
-    var nav = $('.navigation');
-    var header = $('#header');
+    var nav = $('#nav');
     var opener = $('.opener');
+    var header = $('#header');
     
-    //header animation on hover only if the open button is not visible (breakpoint dependant)
+    //behavior for showing desktop nav
+    navOn = function(){
+      logo.stop().animate({top: '-7%'}, 250);
+      nav.stop().animate({opacity: '1'}, 250); 
+    }
+    //behavior for hiding desktop nav
+    navOff = function(){
+      logo.stop().animate({top: '50%'}, 250);
+      nav.stop().animate({opacity: '0'}, 250);
+    }
+    //on doc ready, if desktop version, binds nav behavior to header
     if(opener.css('display') == 'none'){
-      header.mouseenter(function(){  
-        logo.stop().animate({top: '-7%'}, 250);
-        nav.stop().fadeIn(250);   
-      });
-      header.mouseleave(function(){
-        logo.stop().animate({top: '50%'}, 250);
-        nav.stop().fadeOut(250);
-      });
-    //if open button is visible, remove or add class 'open' on click
-    } else if (opener.css('display') == 'block') {
-      opener.click(function(){
-        if(header.hasClass('open')){
-          header.removeClass('open');
-        } else {
-          header.addClass('open');
-        }
-      });
-    } 
+      header.on('mouseenter', navOn);
+      header.on('mouseleave', navOff);
+    }
+    //binds or unbinds functions to nav based on breakpoint on resize
+    //resets tablet/mobile nav when moving to desktop breakpoint
+    $(window).resize(function(){
+      if(opener.css('display') == 'none'){
+        header.on('mouseenter', navOn);
+        header.on('mouseleave', navOff);
+        header.removeClass('open');
+        nav.css('opacity','0');
+        
+      } else if (opener.css('display') == 'block'){
+        header.off();
+      }
+    });
+    //shows or hides nav when opener is clicked
+    opener.click(function(){
+      if(header.hasClass('open')){
+        header.removeClass('open');
+        nav.css('opacity','0');
+      } else {
+        header.addClass('open');
+        nav.css('opacity','1');
+      }
+    });
   }
 
   hoverBtn = function(){
@@ -365,9 +383,8 @@ $(document).ready(function (){
   		}
   	});
   }
-  
-  
-  
-  navShow();
+    
   hoverBtn();
+  navShow();
+  
 });
