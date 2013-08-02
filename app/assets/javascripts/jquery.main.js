@@ -304,10 +304,11 @@ $(document).ready(function (){
     var nav = $('#nav');
     var opener = $('.opener');
     var header = $('#header');
+    var headhold = $('#header .header-holder');
     
     //behavior for showing desktop nav
     navOn = function(){
-      logo.stop().animate({top: '-7%'}, 250);
+      logo.stop().animate({top: '-16%'}, 250);
       nav.stop().animate({opacity: '1'}, 250); 
     }
     //behavior for hiding desktop nav
@@ -317,20 +318,20 @@ $(document).ready(function (){
     }
     //on doc ready, if desktop version, binds nav behavior to header
     if(opener.css('display') == 'none'){
-      header.on('mouseenter', navOn);
-      header.on('mouseleave', navOff);
+      headhold.on('mouseenter', navOn);
+      headhold.on('mouseleave', navOff);
     }
     //binds or unbinds functions to nav based on breakpoint on resize
     //resets tablet/mobile nav when moving to desktop breakpoint
     $(window).resize(function(){
       if(opener.css('display') == 'none'){
-        header.on('mouseenter', navOn);
-        header.on('mouseleave', navOff);
+        headhold.on('mouseenter', navOn);
+        headhold.on('mouseleave', navOff);
         header.removeClass('open');
         nav.css('opacity','0');
         
       } else if (opener.css('display') == 'block'){
-        header.off();
+        headhold.off();
       }
     });
     //shows or hides nav when opener is clicked
