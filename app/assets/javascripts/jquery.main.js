@@ -353,10 +353,10 @@ $(document).ready(function (){
     
       if (scrollPos >= 92){
         $('#header').css({'top':'-92px','position':'fixed'});
-        $('.content').css('margin-top','158px');
+        $('#content').css({'margin-top':'158px'});
       } else if (scrollPos < 92){
         $('#header').css({'top':'0','position':'relative'});
-        $('.content').css('margin-top','0');
+        $('#content').css({'margin-top':'0'});
       }
     });
   }
