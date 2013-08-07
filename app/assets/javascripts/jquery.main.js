@@ -347,17 +347,16 @@ $(document).ready(function (){
   }
   
   navCollapse = function(){
-    $(window).scroll(function(){
-      console.log($(document).scrollTop());
-    });
   
     $(window).scroll(function(){
       var scrollPos = $(document).scrollTop();
-      
-      if (scrollPos > 0){
-        $('#header').css('top','-16%');
-      } else if (scrollPos == 0){
-        $('#header').css('top','0');
+    
+      if (scrollPos >= 92){
+        $('#header').css({'top':'-92px','position':'fixed'});
+        $('.content').css('margin-top','158px');
+      } else if (scrollPos < 92){
+        $('#header').css({'top':'0','position':'relative'});
+        $('.content').css('margin-top','0');
       }
     });
   }
