@@ -345,6 +345,22 @@ $(document).ready(function (){
       }
     });
   }
+  
+  navCollapse = function(){
+    $(window).scroll(function(){
+      console.log($(document).scrollTop());
+    });
+  
+    $(window).scroll(function(){
+      var scrollPos = $(document).scrollTop();
+      
+      if (scrollPos > 0){
+        $('#header').css('top','-16%');
+      } else if (scrollPos == 0){
+        $('#header').css('top','0');
+      }
+    });
+  }
 
   hoverBtn = function(){
     var speed = 250;
@@ -387,5 +403,6 @@ $(document).ready(function (){
     
   hoverBtn();
   navShow();
+  navCollapse();
   
 });
