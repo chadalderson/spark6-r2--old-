@@ -140,130 +140,74 @@
 	</ul>
 	<!-- fb-like -->
 	<section class="fb-like">
-		<a href="#" class="like">facebook <span class="state">LIKE US</span> <span class="state state1">THANKS!</span> <span class="state state2">741 LIKES</span></a>
-		<p>Fusce et mi eget enim suscipit faucibus et ac nisl. </p>
-		<p>Donec risus nibh sit amet enim.</p>
-	</section>
+						<a href="#" class="like"><em>facebook <span class="state">LIKE US</span> <span class="state state1">THANKS!</span> <span class="state state2">741 LIKES</span></em></a>
+						<p>Fusce et mi eget enim suscipit faucibus et ac nisl. </p>
+						<p>Donec risus nibh sit amet enim.</p>
+					</section>
 	<!-- customers -->
 	<section class="customers">
 		<article>
 			<a href="#">
-				<div data-picture data-alt="image description" >
-					<div data-src="/assets/icon-paypal.png" ></div>
-					<div data-src="/assets/icon-paypal-medium.png" data-media="(max-width:940px)" ></div>
-					<div data-src="/assets/icon-paypal-medium2x.png" data-media="(max-width:940px) and (-webkit-min-device-pixel-ratio:1.5), (max-width:940px) and (min-resolution:144dpi)" ></div>
-					<!--[if (lt IE 9) & (!IEMobile)]>
-					<div data-src="images/icon-paypal.png"></div>
-					<![endif]-->
-					<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
-					<noscript><%= image_tag("icon-paypal.png", alt: "paypal icon", size: "148x39") %></noscript>
+				<div class="icon-holder icon-paypal">
+					<%= image_tag("icon-paypal.svg", alt: "icon-paypal", size: "216x58") %>
+					<%= image_tag("icon-paypal-act.svg", alt: "icon-dsc", size: "216x58", class: "rollover") %>
 				</div>
-				<%= image_tag("icon-paypal-act.png", alt: "paypal logo", class: "rollover") %>
 			</a>
 		</article>
 		<article>
 			<a href="#">
-				<div data-picture data-alt="image description" >
-					<div data-src="/assets/icon-dsc.png" ></div>
-					<div data-src="/assets/icon-dsc-medium.png" data-media="(max-width:940px)" ></div>
-					<div data-src="/assets/icon-dsc-medium2x.png" data-media="(max-width:940px) and (-webkit-min-device-pixel-ratio:1.5), (max-width:940px) and (min-resolution:144dpi)" ></div>
-					<!--[if (lt IE 9) & (!IEMobile)]>
-					<div data-src="images/icon-dsc.png"></div>
-					<![endif]-->
-					<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
-					<noscript><%= image_tag("icon-dsc.png", alt: "dollar shave club", size: "89x88") %></noscript>
+				<div class="icon-holder icon-dsc">
+					<%= image_tag("icon-dsc.svg", alt: "icon-dsc", size: "131x131") %>
+					<%= image_tag("icon-dsc-act.svg", alt: "icon-dsc", size: "131x131", class: "rollover") %>
 				</div>
-				<%= image_tag("icon-dsc-act.png", alt: "dollar shave club icon", class: "rollover") %>
 			</a>
 		</article>
 		<article>
 			<a href="#">
-				<div data-picture data-alt="image description" >
-					<div data-src="/assets/icon-cisco.png" ></div>
-					<div data-src="/assets/icon-cisco-medium.png" data-media="(max-width:940px)" ></div>
-					<div data-src="/assets/icon-cisco-medium2x.png" data-media="(max-width:940px) and (-webkit-min-device-pixel-ratio:1.5), (max-width:940px) and (min-resolution:144dpi)" ></div>
-					<!--[if (lt IE 9) & (!IEMobile)]>
-					<div data-src="images/icon-cisco.png"></div>
-					<![endif]-->
-					<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
-					<noscript><%= image_tag("icon-cisco.png", alt: "cisco icon", size: "113x60") %></noscript>
+				<div class="icon-holder icon-cisco">
+				  <%= image_tag("icon-cisco.svg", alt: "icon-cisco", size: "168x89") %>
+				  <%= image_tag("icon-cisco-act.svg", alt: "icon-cisco", size: "131x131", class: "rollover") %>
 				</div>
-				<%= image_tag("icon-cisco-act.png", alt: "Cisco icon", class: "rollover") %>
 			</a>
 		</article>
 		<article>
 			<a href="#">
-				<div data-picture data-alt="image description" >
-					<div data-src="/assets/icon-ebay.png" ></div>
-					<div data-src="/assets/icon-ebay-medium.png" data-media="(max-width:940px)" ></div>
-					<div data-src="/assets/icon-ebay-medium2x.png" data-media="(max-width:940px) and (-webkit-min-device-pixel-ratio:1.5), (max-width:940px) and (min-resolution:144dpi)" ></div>
-					<!--[if (lt IE 9) & (!IEMobile)]>
-					<div data-src="images/icon-ebay.png"></div>
-					<![endif]-->
-					<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
-					<noscript><%= image_tag("icon-ebay.png", alt: "ebay icon", size: "169x40") %></noscript>
+				<div class="icon-holder icon-ebay">
+          <%= image_tag("icon-ebay.svg", alt: "icon-ebay", size: "241x58") %>
+          <%= image_tag("icon-ebay-act.svg", alt: "icon-ebay", size: "241x58", class: "rollover") %>
 				</div>
-				<%= image_tag("icon-ebay-act.png", :alt => "ebay icon", :class => "rollover") %>
 			</a>
 		</article>
 		<article>
 			<a href="#">
-				<div data-picture data-alt="image description" >
-					<div data-src="/assets/icon-bbdo.png" ></div>
-					<div data-src="/assets/icon-bbdo-medium.png" data-media="(max-width:940px)" ></div>
-					<div data-src="/assets/icon-bbdo-medium2x.png" data-media="(max-width:940px) and (-webkit-min-device-pixel-ratio:1.5), (max-width:940px) and (min-resolution:144dpi)" ></div>
-					<!--[if (lt IE 9) & (!IEMobile)]>
-					<div data-src="images/icon-bbdo.png"></div>
-					<![endif]-->
-					<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
-					<noscript><%= image_tag("icon-bbdo.png", alt: "bbdo icon", size: "118x34") %></noscript>
+				<div class="icon-holder icon-bbdo">
+          <%= image_tag("icon-bbdo.svg", alt: "icon-bbdo", size: "176x51") %>
+          <%= image_tag("icon-bbdo-act.svg", alt: "icon-bbo", size: "176x51", class: "rollover") %>
 				</div>
-				<%= image_tag("icon-bbdo-act.png", alt: "bbdo icon", class: "rollover") %>
 			</a>
 		</article>
 		<article>
 			<a href="#">
-				<div data-picture data-alt="image description" >
-					<div data-src="/assets/icon-ebay-inc.png" ></div>
-					<div data-src="/assets/icon-ebay-inc-medium.png" data-media="(max-width:940px)" ></div>
-					<div data-src="/assets/icon-ebay-inc-medium2x.png" data-media="(max-width:940px) and (-webkit-min-device-pixel-ratio:1.5), (max-width:940px) and (min-resolution:144dpi)" ></div>
-					<!--[if (lt IE 9) & (!IEMobile)]>
-					<div data-src="images/icon-ebay-inc.png"></div>
-					<![endif]-->
-					<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
-					<noscript><%= image_tag("icon-ebay-inc.png", alt: "ebay icon", size: "169x50") %></noscript>
+				<div class="icon-holder icon-ebay-inc">
+				  <%= image_tag("icon-ebay-inc.svg", alt: "icon-ebay-inc", size: "251x86") %>
+				  <%= image_tag("icon-ebay-inc-act.svg", alt: "icon-ebay-inc", size: "251x86", class: "rollover") %>
 				</div>
-				<%= image_tag("icon-ebay-inc-act.png", alt: "ebay icon", class: "rollover") %>
 			</a>
 		</article>
 		<article>
 			<a href="#">
-				<div data-picture data-alt="image description" >
-					<div data-src="/assets/icon-att.png" ></div>
-					<div data-src="/assets/icon-att-medium.png" data-media="(max-width:940px)" ></div>
-					<div data-src="/assets/icon-att-medium2x.png" data-media="(max-width:940px) and (-webkit-min-device-pixel-ratio:1.5), (max-width:940px) and (min-resolution:144dpi)" ></div>
-					<!--[if (lt IE 9) & (!IEMobile)]>
-					<div data-src="images/icon-att.png"></div>
-					<![endif]-->
-					<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
-					<noscript><%= image_tag("icon-att.png", alt: "att logo", size: "150x60") %></noscript>
+				<div class="icon-holder icon-att">
+          <%= image_tag("icon-att.svg", alt: "icon-att", size: "223x88") %>
+          <%= image_tag("icon-att-act.svg", alt: "icon-att", size: "223x88", class: "rollover") %>
 				</div>
-				<%= image_tag("icon-att-act.png", alt: "att logo", class: "rollover") %>
 			</a>
 		</article>
 		<article>
 			<a href="#">
-				<div data-picture data-alt="image description" >
-					<div data-src="/assets/icon-mc.png" ></div>
-					<div data-src="/assets/icon-mc-medium.png" data-media="(max-width:940px)" ></div>
-					<div data-src="/assets/icon-mc-medium2x.png" data-media="(max-width:940px) and (-webkit-min-device-pixel-ratio:1.5), (max-width:940px) and (min-resolution:144dpi)" ></div>
-					<!--[if (lt IE 9) & (!IEMobile)]>
-					<div data-src="images/icon-mc.png"></div>
-					<![endif]-->
-					<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
-					<noscript><%= image_tag("icon-mc.png", alt: "mc icon", size: "98x98") %></noscript>
+				<div class="icon-holder icon-mc">
+          <%= image_tag("icon-mc.svg", alt: "icon-mc", size: "157x87") %>
+          <%= image_tag("icon-mc-act.svg", alt: "icon-mc", size: "157x87", class: "rollover") %>
 				</div>
-				<%= image_tag("icon-mc-act.png", alt: "mc icon", class: "rollover") %>
 			</a>
 		</article>
 	</section>

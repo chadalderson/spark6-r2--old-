@@ -90,15 +90,15 @@ input
   background-color: #f4f4f4
   margin: 0 auto
   .header-holder
-    width: 1080px
     position: relative
-    height: 158px
     margin: 0 auto
     background: #fff
+    max-width: 1080px
   .logo
-    background: url(/assets/logo.png) no-repeat
-    width: 62px
-    height: 87px
+    background: url(/assets/logo.svg) no-repeat
+    background-size: 64px 89px
+    width: 64px
+    height: 89px
     text-indent: -9999px
     overflow: hidden
     position: absolute
@@ -109,9 +109,10 @@ input
       display: block
       height: 100%
   .sub-logo
-    background: url(/assets/sub-logo.png) no-repeat
-    width: 91px
-    height: 63px
+    background: url(/assets/s6-logo.svg) no-repeat
+    background-size: 92px 64px
+    width: 92px
+    height: 64px
     text-indent: -9999px
     overflow: hidden
     position: absolute
@@ -123,7 +124,7 @@ input
       display: block
       height: 100%
   .small-logo
-    background: url('/assets/sprite.png') no-repeat -94px 0
+    background: url('/assets/sprite2.png') no-repeat 0 -250px
     width: 54px
     height: 16px
     text-indent: -9999px
@@ -189,21 +190,20 @@ input
 
 /* video-holder
 
-#content
-  .video-holder
-    position: relative
-    img
-      display: block
-      width: 100%
-    .rollover
-      display: none
-      position: absolute
-      left: 0
-      right: 0
-      top: 0
-      bottom: 0
-    &:hover .rollover
-      display: block
+#content .video-holder
+  position: relative
+  img
+    display: block
+    width: 100%
+  .rollover
+    display: none
+    position: absolute
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+  &:hover .rollover
+    display: block
 
 /* list-services
 
@@ -290,65 +290,76 @@ input
       &:after
         content: ''
         position: absolute
-        background: url('/assets/sprite-list-services.png') no-repeat 0 -9999px
       &:hover:after
         content: ''
         position: absolute
-        background: white url('/assets/sprite-list-services.png') no-repeat 0 -9999px
+        background-color: #fff
     .icon-01
       &:after
-        background-position: 0 0
-        width: 15px
-        height: 26px
+        background: url(/assets/phone-icon-w.svg) no-repeat
+        background-size: 16px 27px
+        width: 16px
+        height: 27px
         left: 18px
         top: 10px
       &:hover:after
-        background-position: 0 -50px
+        background: url(/assets/phone-icon.svg) no-repeat
+        background-size: 15px 26px
     .icon-02
       &:after
-        background-position: -29px 0
+        background: url(/assets/set-icon-w.svg) no-repeat
+        background-size: 21px 21px
         width: 21px
         height: 21px
         left: 16px
         top: 12px
       &:hover:after
-        background-position: -29px -50px
+        background: url(/assets/set-icon.svg) no-repeat
+        background-size: 21px 21px
     .icon-03
       &:after
-        background-position: -62px 0
+        background: url(/assets/arrow-icon-w.svg) no-repeat
+        background-size: 24px 23px
         width: 24px
         height: 23px
         left: 14px
         top: 13px
       &:hover:after
-        background-position: -62px -50px
+        background: url(/assets/arrow-icon.svg) no-repeat
+        background-size: 24px 23px
     .icon-04
       &:after
-        background-position: -93px 0
+        background: url(/assets/dimond-icon-w.svg) no-repeat
+        background-size: 23px 20px
         width: 23px
         height: 20px
         left: 15px
         top: 13px
       &:hover:after
-        background-position: -93px -50px
+        background: url(/assets/dimond-icon.svg) no-repeat
+        background-size: 23px 20px
     .icon-05
       &:after
-        background-position: -122px 0
+        background: url(/assets/target-icon-w.svg) no-repeat
+        background-size: 22px 22px
         width: 22px
         height: 22px
         left: 15px
         top: 12px
       &:hover:after
-        background-position: -121px -50px
+        background: url(/assets/target-icon.svg) no-repeat
+        background-size: 22px 22px
     .icon-06
       &:after
-        background-position: -149px 0
+        background: url(/assets/video-cam-icon-w.svg) no-repeat
+        background-size: 26px 14px
         width: 26px
         height: 14px
         left: 13px
         top: 16px
       &:hover:after
-        background-position: -149px -50px
+        background: url(/assets/video-cam-icon.svg) no-repeat
+        background-size: 26px 14px
 
 /* fb-like
 
@@ -365,12 +376,17 @@ input
       letter-spacing: 2px
     .like
       text-indent: -9999px
-      background: url('/assets/sprite.png') no-repeat -200px 0
+      background: url('/assets/sprite2.png') no-repeat -350px 0
       width: 84px
-      height: 117px
       margin: 0 auto 28px
       display: block
       outline: none
+      > em
+        display: block
+        height: 117px
+        font-style: normal
+        background: url(/assets/facebook-logo-b.svg) no-repeat 36px 29px
+        background-size: 14px 27px
       .state
         position: absolute
         color: #0061a5
@@ -382,17 +398,24 @@ input
         margin-left: -2.5%
       .state1, .state2
         display: none
-      &:hover
-        background-position: -299px 0
+      &:hover em
+        background: url(/assets/like-icon-lb.svg) no-repeat 28px 27px
+        background-size: 33px 29px
       &:active
-        background-position: -403px 0
+        background-position: -450px 0
+        em
+          background: url(/assets/like-icon-w.svg) no-repeat 28px 27px
+          background-size: 33px 29px
         .state
           display: none
         .state1
           display: block
       &.disabled
-        background-position: -516px 0
+        background-position: 0 -150px
         cursor: default
+        em
+          background: url(/assets/like-icon-db.svg) no-repeat 28px 27px
+          background-size: 33px 29px
         .state
           display: none
         .state2
@@ -409,6 +432,8 @@ input
     border-color: transparent #f3f3f3 #f3f3f3 transparent
     text-align: center
     font-size: 0
+    a:hover
+      text-decoration: none
     &:after
       content: ''
       display: inline-block
@@ -417,18 +442,42 @@ input
       overflow: hidden
       margin: 0
       vertical-align: middle
-    img, .rollover, div
+    .icon-holder img
+      display: block
+      width: 100%
+      height: auto
+    .rollover
       vertical-align: middle
       display: inline-block
       white-space: normal
-    .rollover
-      display: none
+    .icon-holder
+      vertical-align: middle
+      display: inline-block
+      white-space: normal
+      .rollover
+        display: none
     &:hover
       background: #fcfcfc
-      img
-        display: none
-      .rollover
-        display: inline-block
+      .icon-holder
+        img
+          display: none
+        .rollover
+          display: inline-block
+    .icon-holder
+      &.icon-mc
+        width: 98px
+      &.icon-paypal
+        width: 148px
+      &.icon-dsc
+        width: 89px
+      &.icon-cisco
+        width: 113px
+      &.icon-ebay, &.icon-ebay-inc
+        width: 169px
+      &.icon-bbdo
+        width: 118px
+      &.icon-att
+        width: 150px
   .visual
     position: relative
     .icon
@@ -438,22 +487,51 @@ input
       left: 50%
       text-indent: -9999px
       overflow: hidden
-      background: url('/assets/sprite-visual.png') no-repeat 0 -9999px
+      background: url('/assets/sprite2.png') no-repeat
       width: 112px
       height: 112px
       margin-left: -56px
-    .icon-01
-      background-position: 0 0
-    .icon-02
-      background-position: -118px 0
-    .icon-03
-      background-position: -237px 0
-    .icon-04
-      background-position: -358px 0
-    .icon-05
-      background-position: -479px 0
-    .icon-06
-      background-position: -608px 0
+      &:after
+        content: ''
+        position: absolute
+        top: 50%
+        left: 50%
+    .icon-01:after
+      background: url(/assets/ico46.svg) no-repeat
+      background-size: 41px 41px
+      width: 41px
+      height: 41px
+      margin: -20px 0 0 -20px
+    .icon-02:after
+      background: url(/assets/ico41.svg) no-repeat
+      background-size: 46px 45px
+      width: 46px
+      height: 45px
+      margin: -20px 0 0 -26px
+    .icon-03:after
+      background: url(/assets/ico42.svg) no-repeat
+      background-size: 28px 49px
+      width: 28px
+      height: 49px
+      margin: -25px 0 0 -14px
+    .icon-04:after
+      background: url(/assets/ico45.svg) no-repeat
+      background-size: 39px 39px
+      width: 39px
+      height: 39px
+      margin: -21px 0 0 -20px
+    .icon-05:after
+      background: url(/assets/ico44.svg) no-repeat
+      background-size: 44px 41px
+      width: 44px
+      height: 41px
+      margin: -17px 0 0 -22px
+    .icon-06:after
+      background: url(/assets/ico40.svg) no-repeat
+      background-size: 46px 26px
+      width: 46px
+      height: 26px
+      margin: -13px 0 0 -20px
     img
       display: block
       width: 100%
@@ -513,6 +591,9 @@ input
       vertical-align: top
       width: 40%
       margin: 0 7.5% 79px 0
+      > *
+        position: relative
+        z-index: 10
     h2
       margin: 0 -25px 0 0
       text-transform: uppercase
@@ -520,180 +601,210 @@ input
       color: #006fbc
       padding: 0 0 20px 49px
       position: relative
+      z-index: 2
       &:after
         content: ''
-        background: url('/assets/sprite.png') no-repeat 0 -9999px
         width: 27px
         height: 28px
         position: absolute
         left: 0
+        z-index: -1
         top: 0
     .icon-01:after
-      background-position: 0 -79px
+      background: url(/assets/ico01.svg) no-repeat
+      background-size: 27px 31px
       width: 27px
-      height: 28px
+      height: 31px
+      top: -3px
     .icon-02:after
-      background-position: -39px -79px
-      width: 33px
-      height: 32px
-      left: 2px
-      top: -5px
+      background: url(/assets/ico10.svg) no-repeat
+      background-size: 36px 35px
+      width: 36px
+      height: 35px
+      left: 0
+      top: -7px
     .icon-03:after
-      background-position: -84px -78px
-      width: 29px
-      height: 34px
-      left: -1px
-      top: -7px
-    .icon-04:after
-      background-position: -129px -78px
+      background: url(/assets/ico09.svg) no-repeat
+      background-size: 32px 37px
       width: 32px
-      height: 31px
-      left: 2px
-      top: -7px
-    .icon-05:after
-      background-position: 0 -123px
-      width: 36px
-      height: 24px
-      left: -7px
-      top: 3px
-    .icon-06:after
-      background-position: -48px -123px
-      width: 33px
-      height: 34px
-      left: 0
-      top: -5px
-    .icon-07:after
-      background-position: -95px -123px
-      width: 35px
-      height: 34px
-      left: -7px
-      top: -5px
-    .icon-08:after
-      background-position: -139px -123px
-      width: 29px
-      height: 39px
-      left: 1px
-      top: -6px
-    .icon-09:after
-      background-position: 0 -175px
-      width: 30px
-      height: 30px
-      left: -7px
-      top: -1px
-    .icon-10:after
-      background-position: -42px -175px
-      width: 36px
-      height: 30px
-      left: -5px
-      top: -1px
-    .icon-11:after
-      background-position: -92px -175px
-      width: 35px
-      height: 31px
-      left: -12px
-      top: 0
-    .icon-12:after
-      background-position: -141px -175px
-      width: 36px
-      height: 30px
-      left: -5px
-      top: -1px
-    .icon-13:after
-      background-position: 0 -214px
-      width: 34px
-      height: 39px
-      left: -7px
-      top: -8px
-    .icon-14:after
-      background-position: -46px -215px
-      width: 34px
-      height: 39px
-      left: -3px
-      top: -6px
-    .icon-15:after
-      background-position: -91px -215px
-      width: 36px
-      height: 35px
-      left: -6px
-      top: -6px
-    .icon-16:after
-      background-position: -131px -215px
-      width: 49px
-      height: 23px
-      left: -9px
-      top: 2px
-    .icon-17:after
-      background-position: -194px -123px
-      width: 36px
-      height: 35px
-      left: -9px
-      top: -4px
-    .icon-18:after
-      background-position: -247px -123px
-      width: 32px
-      height: 35px
-      left: 0
-      top: -4px
-    .icon-19:after
-      background-position: -292px -123px
-      width: 24px
       height: 37px
       left: -3px
-      top: -4px
-    .icon-20:after
-      background-position: -187px -175px
-      width: 39px
-      height: 38px
-      left: -1px
-      top: -6px
-    .icon-21:after
-      background-position: -242px -175px
-      width: 36px
-      height: 35px
-      left: -8px
-      top: -2px
-    .icon-22:after
-      background-position: -288px -175px
-      width: 39px
+      top: -9px
+    .icon-04:after
+      background: url(/assets/ico08.svg) no-repeat
+      background-size: 34px 33px
+      width: 34px
       height: 33px
-      left: -1px
-      top: -2px
-    .icon-23:after
-      background-position: -186px -215px
+      left: 1px
+      top: -8px
+    .icon-05:after
+      background: url(/assets/ico32.svg) no-repeat
+      background-size: 38px 27px
       width: 38px
-      height: 35px
-      left: -3px
-      top: -3px
-    .icon-24:after
-      background-position: -237px -215px
+      height: 27px
+      left: -8px
+      top: 1px
+    .icon-06:after
+      background: url(/assets/ico33.svg) no-repeat
+      background-size: 38px 36px
       width: 38px
       height: 36px
-      left: 0
+      left: -12px
       top: -7px
-    .icon-25:after
-      background-position: -290px -215px
-      width: 23px
-      height: 33px
-      left: 3px
-      top: -4px
-    .icon-26:after
-      background-position: 0 -261px
-      width: 40px
-      height: 20px
-      left: -2px
-      top: 4px
-    .icon-27:after
-      background-position: -53px -261px
-      width: 16px
-      height: 33px
-      left: 8px
-      top: 0
-    .icon-28:after
-      background-position: -85px -261px
-      width: 37px
+    .icon-07:after
+      background: url(/assets/ico34.svg) no-repeat
+      background-size: 36px 38px
+      width: 36px
+      height: 38px
+      left: -7px
+      top: -7px
+    .icon-08:after
+      background: url(/assets/ico35.svg) no-repeat
+      background-size: 33px 42px
+      width: 33px
+      height: 42px
+      left: -9px
+      top: -8px
+    .icon-09:after
+      background: url(/assets/ico36.svg) no-repeat
+      background-size: 32px 32px
+      width: 32px
       height: 32px
-      left: 0
+      left: -8px
       top: -3px
+    .icon-10:after
+      background: url(/assets/ico37.svg) no-repeat
+      background-size: 38px 31px
+      width: 38px
+      height: 31px
+      left: -15px
+      top: -3px
+    .icon-11:after
+      background: url(/assets/ico21.svg) no-repeat
+      background-size: 38px 33px
+      width: 38px
+      height: 33px
+      left: -14px
+      top: -3px
+    .icon-12:after
+      background: url(/assets/ico20.svg) no-repeat
+      background-size: 39px 33px
+      width: 39px
+      height: 33px
+      left: -16px
+      top: -4px
+    .icon-13:after
+      background: url(/assets/ico14.svg) no-repeat
+      background-size: 37px 41px
+      width: 37px
+      height: 41px
+      left: -8px
+      top: -8px
+    .icon-14:after
+      background: url(/assets/ico13.svg) no-repeat
+      background-size: 36px 41px
+      width: 36px
+      height: 41px
+      left: -9px
+      top: -8px
+    .icon-15:after
+      background: url(/assets/ico11.svg) no-repeat
+      background-size: 37px 38px
+      width: 37px
+      height: 38px
+      left: -7px
+      top: -9px
+    .icon-16:after
+      background: url(/assets/ico12.svg) no-repeat
+      background-size: 51px 25px
+      width: 51px
+      height: 25px
+      left: -15px
+      top: 0
+    .icon-17:after
+      background: url(/assets/ico19.svg) no-repeat
+      background-size: 40px 39px
+      width: 40px
+      height: 39px
+      left: -11px
+      top: -7px
+    .icon-18:after
+      background: url(/assets/ico18.svg) no-repeat
+      background-size: 36px 37px
+      width: 36px
+      height: 37px
+      left: -10px
+      top: -7px
+    .icon-19:after
+      background: url(/assets/ico17.svg) no-repeat
+      background-size: 26px 40px
+      width: 26px
+      height: 40px
+      left: -4px
+      top: -7px
+    .icon-20:after
+      background: url(/assets/ico16.svg) no-repeat
+      background-size: 42px 41px
+      width: 39px
+      height: 41px
+      left: -10px
+      top: -9px
+    .icon-21:after
+      background: url(/assets/ico15.svg) no-repeat
+      background-size: 40px 37px
+      width: 40px
+      height: 37px
+      left: -11px
+      top: -4px
+    .icon-22:after
+      background: url(/assets/ico43.svg) no-repeat
+      background-size: 40px 34px
+      width: 40px
+      height: 34px
+      left: -10px
+      top: -4px
+    .icon-23:after
+      background: url(/assets/ico23.svg) no-repeat
+      background-size: 41px 36px
+      width: 41px
+      height: 36px
+      left: -5px
+      top: -5px
+    .icon-24:after
+      background: url(/assets/ico26.svg) no-repeat
+      background-size: 40px 38px
+      width: 40px
+      height: 38px
+      left: -9px
+      top: -9px
+    .icon-25:after
+      background: url(/assets/ico24.svg) no-repeat
+      background-size: 26px 37px
+      width: 26px
+      height: 37px
+      left: 2px
+      top: -8px
+    .icon-26:after
+      background: url(/assets/ico27.svg) no-repeat
+      background-size: 43px 22px
+      width: 43px
+      height: 22px
+      left: -12px
+      top: 2px
+    .icon-27:after
+      background: url(/assets/ico25.svg) no-repeat
+      background-size: 18px 35px
+      width: 18px
+      height: 35px
+      left: 6px
+      top: -2px
+    .icon-28:after
+      background: url(/assets/ico28.svg) no-repeat
+      background-size: 38px 34px
+      width: 38px
+      height: 34px
+      left: -9px
+      top: -5px
     p
       margin: 0
       padding: 0 0 0 47px
@@ -787,7 +898,7 @@ input
   .rollover
     padding-right: 47px
     .more
-      background: url('/assets/sprite.png') no-repeat -438px -142px
+      background: url('/assets/sprite2.png') no-repeat -150px 0
       width: 77px
       height: 77px
       text-indent: -9999px
@@ -795,38 +906,42 @@ input
       padding: 0
       border: none
       margin-left: 23px
-    .icon-01:after
-      left: 32px
-      top: 26px
-    .icon-02:after
-      left: 28px
-      top: 28px
-    .icon-03:after
-      left: 26px
-      top: 29px
-    .icon-04:after
-      left: 28px
-      top: 30px
-    .icon-05:after
-      left: 28px
-      top: 28px
-    .icon-06:after
-      left: 29px
-      top: 32px
-    .more:hover:after
-      background: url('/assets/sprite-list-services.png') no-repeat 0 -9999px
-    .icon-01:hover:after
-      background-position: 0 0
-    .icon-02:hover:after
-      background-position: -29px 0
-    .icon-03:hover:after
-      background-position: -62px 0
-    .icon-04:hover:after
-      background-position: -93px 0
-    .icon-05:hover:after
-      background-position: -122px 0
-    .icon-06:hover:after
-      background-position: -149px 0
+    .icon-01
+      &:after, &:hover:after
+        background: url(/assets/phone-icon-w.svg) no-repeat
+        background-size: 16px 27px
+        left: 30px
+        top: 26px
+    .icon-02
+      &:after, &:hover:after
+        background: url(/assets/set-icon-w.svg) no-repeat
+        background-size: 21px 21px
+        left: 28px
+        top: 28px
+    .icon-03
+      &:after, &:hover:after
+        background: url(/assets/arrow-icon-w.svg) no-repeat
+        background-size: 24px 23px
+        left: 26px
+        top: 29px
+    .icon-04
+      &:after, &:hover:after
+        background: url(/assets/dimond-icon-w.svg) no-repeat
+        background-size: 23px 20px
+        left: 28px
+        top: 30px
+    .icon-05
+      &:after, &:hover:after
+        background: url(/assets/target-icon-w.svg) no-repeat
+        background-size: 22px 22px
+        left: 28px
+        top: 28px
+    .icon-06
+      &:after, &:hover:after
+        background: url(/assets/video-cam-icon-w.svg) no-repeat
+        background-size: 26px 14px
+        left: 29px
+        top: 32px
 
 /* contact-holder
 
@@ -947,11 +1062,12 @@ input
       &:after
         content: ''
         position: absolute
-        background: url('/assets/sprite.png') no-repeat -395px -125px
-        width: 30px
-        height: 42px
-        left: 3px
-        top: -13px
+        background: url(/assets/s6-logo.svg) no-repeat
+        background-size: 31px 43px
+        width: 31px
+        height: 43px
+        left: 2px
+        top: -14px
     address
       font-style: normal
       margin: 0 0 44px
@@ -1001,36 +1117,41 @@ input
       height: 66px
       z-index: 10000
       &:after
-        background: url('/assets/sprite.png') no-repeat 0 -9999px
-        left: 19px
-        top: 17px
         content: ''
         position: absolute
     .linkedin
       &:after
-        background-position: -571px -230px
+        background: url(/assets/in-logo-w.svg) no-repeat
+        background-size: 29px 28px
         width: 29px
         height: 28px
+        left: 19px
+        top: 17px
       &:hover:after
-        background-position: -571px -272px
+        background: url(/assets/in-logo.svg) no-repeat
+        background-size: 29px 28px
     .facebook
       &:after
-        background-position: -533px -230px
-        width: 13px
-        height: 27px
-        left: 28px
-        top: 20px
+        background: url(/assets/facebook-logo-w.svg) no-repeat
+        background-size: 15px 29px
+        width: 15px
+        height: 29px
+        left: 27px
+        top: 19px
       &:hover:after
-        background-position: -534px -273px
+        background: url(/assets/facebook-logo-r.svg) no-repeat
+        background-size: 15px 29px
     .pinterest
       &:after
-        background-position: -487px -230px
-        width: 23px
-        height: 29px
+        background: url(/assets/pin-logo-w.svg) no-repeat
+        background-size: 24px 30px
+        width: 24px
+        height: 30px
         left: 22px
         top: 19px
       &:hover:after
-        background-position: -487px -271px
+        background: url(/assets/pin-logo.svg) no-repeat
+        background-size: 24px 30px
   .device
     position: relative
     padding-bottom: 131px
@@ -1288,32 +1409,43 @@ input
             position: absolute
             left: 0
             top: 0
-            background: url('/assets/sprite.png') no-repeat -451px -9999px
-            width: 19px
-            height: 19px
+          &:hover
+            background: #fff
         .linkedin
           &:after
-            background-position: -451px -239px
+            background: url(/assets/in-logo-w.svg) no-repeat
+            background-size: 19px 19px
             left: 7px
             top: 5px
+            width: 19px
+            height: 19px
           &:hover:after
-            background-position: -452px -281px
+            background: url(/assets/in-logo.svg) no-repeat
+            background-size: 19px 19px
         .pinterest
-          background: url('/assets/sprite.png') no-repeat -397px -223px
-          width: 37px
-          height: 37px
-          border: none
-          &:hover
-            background: url('/assets/sprite.png') no-repeat -397px -263px
+          -webkit-border-radius: 30px
+          border-radius: 30px
+          &:after
+            background: url(/assets/pin-logo-w.svg) no-repeat
+            background-size: 17px 23px
+            width: 17px
+            height: 23px
+            left: 8px
+            top: 5px
+          &:hover:after
+            background: url(/assets/pin-logo.svg) no-repeat
+            background-size: 17px 23px
         .flipbook
           &:after
-            background-position: -359px -239px
+            background: url(/assets/flip-logo-w.svg) no-repeat
+            background-size: 23px 22px
             width: 23px
             height: 22px
-            left: 7px
+            left: 4px
             top: 5px
           &:hover:after
-            background-position: -359px -278px
+            background: url(/assets/flip-logo.svg) no-repeat
+            background-size: 23px 22px
   .location
     display: inline-block
     vertical-align: top
@@ -1396,9 +1528,10 @@ input
               position: absolute
               top: 2px
               left: 50%
-              background: url('/assets/sprite.png') no-repeat -400px -175px
-              width: 25px
-              height: 40px
+              background: url('/assets/loc-icon-black.svg') no-repeat
+              background-size: 26px 41px
+              width: 26px
+              height: 41px
               margin-left: -11px
           p
             margin: 0
@@ -1486,6 +1619,8 @@ input
   #nav
     display: block !important
     position: static !important
+  .header-holder
+    height: 158px
 
 @media only screen and (max-width: 940px)
   #content .location .block.top img
@@ -1500,12 +1635,14 @@ input
         display: block
         background-position: 0 -20px
         top: 70px
+        margin-top: 7px
   .wrap
     padding: 0 28px
   .navigation .opener
     display: block
     float: left
-    background: url('/assets/sprite-table.png') no-repeat -58px 0
+    background: url(/assets/open-btn.svg) no-repeat
+    background-size: 34px 24px
     width: 34px
     height: 24px
     text-indent: -9999px
@@ -1513,9 +1650,10 @@ input
     margin: 34px 0 30px 38px
   #header
     &.open .navigation .opener
-      background: url('/assets/sprite-table.png') no-repeat -117px 0
-      width: 23px
-      height: 23px
+      background: url(/assets/close-icon.svg) no-repeat
+      background-size: 24px 24px
+      width: 24px
+      height: 24px
     .navigation
       display: block
       bottom: auto
@@ -1548,9 +1686,9 @@ input
       &:after
         display: none
   #header .logo
-    background: url('/assets/sprite-table.png') no-repeat 0 0
-    width: 42px
-    height: 58px
+    background-size: 43px 60px
+    width: 43px
+    height: 60px
     z-index: 99
     margin: -30px 0 0 -21px
   #content
@@ -1565,6 +1703,7 @@ input
         display: inline-block
         vertical-align: middle
       a
+        display: block
         height: 100%
         width: 100%
         white-space: nowrap
@@ -1628,7 +1767,7 @@ input
       height: 177px
       &:hover
         background: none
-        img
+        .icon-holder
           display: inline-block
         .rollover
           display: none
@@ -1649,64 +1788,113 @@ input
         height: 138px
         margin-left: -69px
         outline: none
-        &:after
-          display: none
+        background: url(/assets/sprite2-tablet.png) no-repeat -150px 0
+        &:hover
+          background: url(/assets/sprite2-tablet.png) no-repeat -150px 0
       .icon-01
-        &:hover
-          background: url('/assets/sprite-table.png') no-repeat 0 -128px
-        background: url('/assets/sprite-table.png') no-repeat 0 -128px
+        &:after, &:hover:after
+          background: url(/assets/phone-icon.svg) no-repeat
+          background-size: 34px 62px
+          width: 34px
+          height: 62px
+          left: 52px
+          top: 38px
       .icon-02
-        &:hover
-          background: url('/assets/sprite-table.png') no-repeat -152px -128px
-        background: url('/assets/sprite-table.png') no-repeat -152px -128px
+        &:after, &:hover:after
+          background: url(/assets/set-icon.svg) no-repeat
+          background-size: 49px 49px
+          width: 49px
+          height: 49px
+          left: 46px
+          top: 42px
       .icon-03
-        &:hover
-          background: url('/assets/sprite-table.png') no-repeat -298px -127px
-        background: url('/assets/sprite-table.png') no-repeat -298px -127px
+        &:after, &:hover:after
+          background: url(/assets/arrow-icon.svg) no-repeat
+          background-size: 56px 54px
+          width: 56px
+          height: 54px
+          left: 38px
+          top: 45px
       .icon-04
-        &:hover
-          background: url('/assets/sprite-table.png') no-repeat 0 -272px
-        background: url('/assets/sprite-table.png') no-repeat 0 -272px
+        &:after, &:hover:after
+          background: url(/assets/dimond-icon.svg) no-repeat
+          background-size: 54px 51px
+          width: 54px
+          height: 51px
+          left: 42px
+          top: 48px
       .icon-05
-        &:hover
-          background: url('/assets/sprite-table.png') no-repeat -152px -272px
-        background: url('/assets/sprite-table.png') no-repeat -152px -272px
+        &:after, &:hover:after
+          background: url(/assets/target-icon.svg) no-repeat
+          background-size: 53px 53px
+          width: 53px
+          height: 53px
+          left: 43px
+          top: 43px
       .icon-06
-        &:hover
-          background: url('/assets/sprite-table.png') no-repeat -298px -272px
-        background: url('/assets/sprite-table.png') no-repeat -298px -272px
+        &:after, &:hover:after
+          background: url(/assets/video-cam-icon.svg) no-repeat
+          background-size: 57px 32px
+          width: 57px
+          height: 32px
+          left: 45px
+          top: 53px
     &.small .rollover
       .more
-        background: url('/assets/sprite-table.png') no-repeat 0 -9999px
         width: 111px
         height: 111px
         margin: -2px 0 0 -55px
-        &:after
-          display: none
+        background: url(/assets/sprite2-tablet.png) no-repeat -300px 0
+        &:hover
+          background: url(/assets/sprite2-tablet.png) no-repeat -300px 0
       .icon-01
-        &:hover
-          background-position: 0 -418px
-        background-position: 0 -418px
+        &:after, &:hover:after
+          background: url(/assets/phone-icon.svg) no-repeat
+          background-size: 28px 49px
+          width: 28px
+          height: 49px
+          left: 41px
+          top: 31px
       .icon-02
-        &:hover
-          background-position: -121px -418px
-        background-position: -121px -418px
+        &:after, &:hover:after
+          background: url(/assets/set-icon.svg) no-repeat
+          background-size: 38px 39px
+          width: 38px
+          height: 39px
+          left: 37px
+          top: 35px
       .icon-03
-        &:hover
-          background-position: -243px -418px
-        background-position: -243px -418px
+        &:after, &:hover:after
+          background: url(/assets/arrow-icon.svg) no-repeat
+          background-size: 45px 43px
+          width: 45px
+          height: 43px
+          left: 32px
+          top: 35px
       .icon-04
-        &:hover
-          background-position: -366px -418px
-        background-position: -366px -418px
+        &:after, &:hover:after
+          background: url(/assets/dimond-icon.svg) no-repeat
+          background-size: 44px 41px
+          width: 44px
+          height: 41px
+          left: 33px
+          top: 39px
       .icon-05
-        &:hover
-          background-position: 0 -541px
-        background-position: 0 -541px
+        &:after, &:hover:after
+          background: url(/assets/target-icon.svg) no-repeat
+          background-size: 42px 42px
+          width: 42px
+          height: 42px
+          left: 35px
+          top: 35px
       .icon-06
-        &:hover
-          background-position: -121px -541px
-        background-position: -121px -541px
+        &:after, &:hover:after
+          background: url(/assets/video-cam-icon.svg) no-repeat
+          background-size: 46px 26px
+          width: 46px
+          height: 26px
+          left: 36px
+          top: 43px
   #content
     .control-services h1
       padding-bottom: 37px
@@ -1720,23 +1908,47 @@ input
           width: 46px
           bottom: -13px
       .icon
-        background: url('/assets/sprite-visual-medium.png') no-repeat 0 -9999px
+        background: url(/assets/sprite2-tablet.png) no-repeat
         width: 124px
         height: 124px
         margin-left: -62px
         bottom: -61px
-      .icon-01
-        background-position: -256px 0
-      .icon-02
-        background-position: -514px 0
-      .icon-03
-        background-position: -386px 0
-      .icon-04
-        background-position: 0 0
-      .icon-05
-        background-position: -127px 0
-      .icon-06
-        background-position: -656px 0
+      .icon-01:after
+        background: url(/assets/ico46.svg) no-repeat
+        background-size: 46px 46px
+        width: 46px
+        height: 46px
+        margin: -22px 0 0 -23px
+      .icon-02:after
+        background: url(/assets/ico41.svg) no-repeat
+        background-size: 49px 48px
+        width: 49px
+        height: 48px
+        margin: -22px 0 0 -28px
+      .icon-03:after
+        background: url(/assets/ico42.svg) no-repeat
+        background-size: 31px 55px
+        width: 31px
+        height: 55px
+        margin: -27px 0 0 -16px
+      .icon-04:after
+        background: url(/assets/ico45.svg) no-repeat
+        background-size: 42px 42px
+        width: 42px
+        height: 42px
+        margin: -22px 0 0 -20px
+      .icon-05:after
+        background: url(/assets/ico44.svg) no-repeat
+        background-size: 48px 46px
+        width: 48px
+        height: 46px
+        margin: -19px 0 0 -25px
+      .icon-06:after
+        background: url(/assets/ico40.svg) no-repeat
+        background-size: 50px 29px
+        width: 50px
+        height: 29px
+        margin: -14px 0 0 -21px
     .block-introduction
       padding: 78px 0 65px
       h1
@@ -1764,173 +1976,200 @@ input
         line-height: 19px
         padding: 0 0 0 33px
       h2:after
-        background: url('/assets/sprite-table.png') no-repeat 0 -9999px
         width: 21px
         height: 24px
       .icon-01:after
-        background-position: -437px -56px
-        width: 19px
-        height: 21px
-        left: 3px
-        top: 3px
-      .icon-02:after
-        background-position: -464px -56px
-        width: 23px
-        height: 23px
-        left: -2px
-        top: 0
-      .icon-03:after
-        background-position: -381px -82px
+        background: url(/assets/ico01.svg) no-repeat
+        background-size: 19px 22px
         width: 19px
         height: 22px
-        left: 4px
+        left: 1px
         top: 1px
-      .icon-04:after
-        background-position: -407px -82px
-        width: 22px
-        height: 21px
+      .icon-02:after
+        background: url(/assets/ico10.svg) no-repeat
+        background-size: 25px 25px
+        width: 25px
+        height: 25px
         left: -3px
-        top: 1px
+        top: -2px
+      .icon-03:after
+        background: url(/assets/ico09.svg) no-repeat
+        background-size: 20px 23px
+        width: 20px
+        height: 23px
+        left: 2px
+        top: -1px
+      .icon-04:after
+        background: url(/assets/ico08.svg) no-repeat
+        background-size: 23px 22px
+        width: 23px
+        height: 22px
+        left: -3px
+        top: 0
       .icon-05:after
-        background-position: -437px -133px
-        width: 27px
-        height: 19px
-        left: -2px
-        top: 2px
+        background: url(/assets/ico32.svg) no-repeat
+        background-size: 29px 20px
+        width: 29px
+        height: 20px
+        left: -5px
+        top: 1px
       .icon-06:after
-        background-position: -477px -133px
+        background: url(/assets/ico33.svg) no-repeat
+        background-size: 25px 26px
+        width: 25px
+        height: 26px
+        left: -3px
+        top: -4px
+      .icon-07:after
+        background: url(/assets/ico34.svg) no-repeat
+        background-size: 25px 25px
+        width: 25px
+        height: 25px
+        left: -3px
+        top: -1px
+      .icon-08:after
+        background: url(/assets/ico35.svg) no-repeat
+        background-size: 20px 28px
+        width: 20px
+        height: 28px
+        left: 0
+        top: -1px
+      .icon-09:after
+        background: url(/assets/ico36.svg) no-repeat
+        background-size: 23px 22px
+        width: 23px
+        height: 22px
+        left: -1px
+        top: -1px
+      .icon-10:after
+        background: url(/assets/ico37.svg) no-repeat
+        background-size: 26px 22px
+        width: 26px
+        height: 22px
+        left: -5px
+        top: 0
+      .icon-11:after
+        background: url(/assets/ico21.svg) no-repeat
+        background-size: 26px 23px
+        width: 26px
+        height: 23px
+        left: -4px
+        top: 0
+      .icon-12:after
+        background: url(/assets/ico20.svg) no-repeat
+        background-size: 26px 23px
+        width: 26px
+        height: 23px
+        left: -4px
+        top: 0
+      .icon-13:after
+        background: url(/assets/ico14.svg) no-repeat
+        background-size: 24px 26px
+        width: 24px
+        height: 26px
+        left: -2px
+        top: -3px
+      .icon-14:after
+        background: url(/assets/ico13.svg) no-repeat
+        background-size: 23px 27px
+        width: 23px
+        height: 27px
+        left: -1px
+        top: -3px
+      .icon-15:after
+        background: url(/assets/ico11.svg) no-repeat
+        background-size: 23px 24px
         width: 23px
         height: 24px
-        left: -3px
-        top: -3px
-      .icon-07:after
-        background-position: -438px -160px
+        left: -1px
+        top: -2px
+      .icon-16:after
+        background: url(/assets/ico12.svg) no-repeat
+        background-size: 36px 18px
+        width: 36px
+        height: 18px
+        left: -11px
+        top: 2px
+      .icon-17:after
+        background: url(/assets/ico19.svg) no-repeat
+        background-size: 25px 25px
+        width: 25px
+        height: 25px
+        left: 0
+        top: -2px
+      .icon-18:after
+        background: url(/assets/ico18.svg) no-repeat
+        background-size: 23px 24px
+        width: 23px
+        height: 34px
+        left: -1px
+        top: -2px
+      .icon-19:after
+        background: url(/assets/ico17.svg) no-repeat
+        background-size: 18px 27px
+        width: 18px
+        height: 27px
+        left: 3px
+        top: -2px
+      .icon-20:after
+        background: url(/assets/ico16.svg) no-repeat
+        background-size: 28px 28px
+        width: 28px
+        height: 28px
+        left: -5px
+        top: -5px
+      .icon-21:after
+        background: url(/assets/ico15.svg) no-repeat
+        background-size: 24px 24px
         width: 24px
         height: 24px
         left: -2px
-        top: 2px
-      .icon-08:after
-        background-position: -481px -160px
-        width: 19px
-        height: 27px
-        left: 0
-        top: 2px
-      .icon-09:after
-        background-position: -435px -82px
-        width: 22px
-        height: 21px
-        left: -3px
-        top: 1px
-      .icon-10:after
-        background-position: -464px -82px
-        width: 25px
-        height: 21px
-        left: -3px
-        top: 1px
-      .icon-11:after
-        background-position: -440px -108px
-        width: 25px
-        height: 22px
-        left: -3px
-        top: 1px
-      .icon-12:after
-        background-position: -473px -108px
-        width: 25px
-        height: 22px
-        left: -3px
-        top: 1px
-      .icon-13:after
-        background-position: -379px 0
-        width: 21px
-        height: 24px
-        left: 1px
-        top: -1px
-      .icon-14:after
-        background: url('/assets/sprite-table.png') no-repeat -406px 0
-        width: 22px
-        height: 25px
-        left: -2px
-        top: -1px
-      .icon-15:after
-        background: url('/assets/sprite-table.png') no-repeat -433px 0
-        width: 22px
-        height: 22px
-        left: 1px
-        top: 1px
-      .icon-16:after
-        background: url('/assets/sprite-table.png') no-repeat -460px 0
-        width: 35px
-        height: 17px
-        left: -11px
-        top: 4px
-      .icon-17:after
-        background-position: -377px -28px
-        width: 23px
-        height: 23px
-        left: 2px
-        top: 1px
-      .icon-18:after
-        background-position: -405px -28px
-        width: 20px
-        height: 23px
-        left: 0
-        top: 0
-      .icon-19:after
-        background-position: -433px -28px
-        width: 16px
-        height: 25px
-        left: 5px
-        top: 2px
-      .icon-20:after
-        background-position: -458px -27px
-        width: 26px
-        height: 26px
-        left: -6px
-        top: -2px
-      .icon-21:after
-        background-position: -378px -56px
-        width: 23px
-        height: 23px
-        left: -2px
         top: 0
       .icon-22:after
-        background-position: -408px -56px
-        width: 23px
-        height: 21px
-        left: -2px
-        top: -1px
-      .icon-23:after
-        background-position: -437px -189px
-        width: 28px
-        height: 25px
+        background: url(/assets/ico43.svg) no-repeat
+        background-size: 25px 23px
+        width: 25px
+        height: 23px
         left: -3px
         top: -1px
-      .icon-24:after
-        background-position: -474px -189px
-        width: 26px
+      .icon-23:after
+        background: url(/assets/ico23.svg) no-repeat
+        background-size: 30px 25px
+        width: 30px
         height: 25px
+        left: -5px
+        top: -2px
+      .icon-24:after
+        background: url(/assets/ico26.svg) no-repeat
+        background-size: 28px 26px
+        width: 28px
+        height: 26px
         left: -5px
         top: -3px
       .icon-25:after
-        background-position: -437px -217px
-        width: 17px
+        background: url(/assets/ico24.svg) no-repeat
+        background-size: 19px 27px
+        width: 19px
+        height: 27px
+        left: 3px
+        top: -4px
+      .icon-26:after
+        background: url(/assets/ico27.svg) no-repeat
+        background-size: 32px 17px
+        width: 32px
+        height: 17px
+        left: -8px
+        top: 3px
+      .icon-27:after
+        background: url(/assets/ico25.svg) no-repeat
+        background-size: 14px 25px
+        width: 14px
         height: 25px
         left: 5px
-        top: 1px
-      .icon-26:after
-        background-position: -470px -217px
-        width: 30px
-        height: 15px
-        left: -7px
-        top: 6px
-      .icon-27:after
-        background-position: -439px -245px
-        width: 12px
-        height: 23px
-        left: 7px
         top: 0
       .icon-28:after
-        background-position: -474px -245px
+        background: url(/assets/ico28.svg) no-repeat
+        background-size: 24px 20px
         width: 24px
         height: 20px
         left: -4px
@@ -2010,7 +2249,7 @@ input
         padding: 0 0 0 65px
         margin-bottom: 18px
         &:after
-          background: url('/assets/sprite-table.png') no-repeat -8px -71px
+          background-size: 27px 38px
           width: 27px
           height: 38px
           left: 18px
@@ -2064,20 +2303,20 @@ input
             line-height: 13px
             margin: 0 5px 0 0
         .active a
-          padding: 16px 40px 12px
-          &:after
-            border-left: 5px solid transparent
-            border-right: 5px solid transparent
-            border-top: 5px solid #171A1C
-            bottom: -5px
-            margin-left: 7px
-            left: 21%
           span
             height: 14px
             width: 14px
             font-size: 10px
             line-height: 13px
             margin: 0 5px 0 0
+          padding: 16px 40px 12px
+          &:after
+            left: 21%
+            border-left: 5px solid transparent
+            border-right: 5px solid transparent
+            border-top: 5px solid #171A1C
+            bottom: -5px
+            margin-left: 7px
       &.small .content
         right: 0.3%
         top: 30.5%
@@ -2160,23 +2399,20 @@ input
           width: 34px
           height: 34px
         .linkedin:after
-          background-position: -452px -281px
-        .pinterest
-          &:hover
-            background: url('/assets/sprite.png') no-repeat -399px -265px
-            border: 1px solid #ff3000
-            height: 34px
-            width: 34px
-            -webkit-border-radius: 17px
-            border-radius: 17px
-          background: url('/assets/sprite.png') no-repeat -399px -265px
-          border: 1px solid #ff3000
-          height: 34px
-          width: 34px
-          -webkit-border-radius: 17px
-          border-radius: 17px
+          background: url(/assets/in-logo.svg) no-repeat
+          background-size: 19px 19px
+          left: 8px
+          top: 7px
+        .pinterest:after
+          background: url(/assets/pin-logo.svg) no-repeat
+          background-size: 17px 23px
+          left: 9px
+          top: 7px
         .flipbook:after
-          background-position: -359px -278px
+          background: url(/assets/flip-logo.svg) no-repeat
+          background-size: 23px 22px
+          left: 6px
+          top: 6px
       > li .rollover
         display: block
     .container
@@ -2204,6 +2440,23 @@ input
         &.top .content
           left: 7%
           top: 37%
+    .customers article .icon-holder
+      &.icon-mc
+        width: 73px
+      &.icon-paypal
+        width: 110px
+      &.icon-dsc
+        width: 66px
+      &.icon-cisco
+        width: 84px
+      &.icon-ebay
+        width: 126px
+      &.icon-bbdo
+        width: 88px
+      &.icon-att
+        width: 112px
+      &.icon-ebay-inc
+        width: 126px
   #footer
     .footer-frame
       padding: 51px 29px 66px
@@ -2214,244 +2467,39 @@ input
       margin-left: 28px
 
 /* retina 940
-
-@media (max-width: 940px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 940px) and (min-resolution: 144dpi)
-  .navigation .opener
-    background: url('/assets/sprite-table@2x.png') no-repeat -59px 0
-    background-size: 500px 652px
-    width: 33px
-    height: 23px
-  #header
-    .logo
-      background: url('/assets/sprite-table@2x.png') no-repeat 0 0
-      background-size: 500px 652px
-      width: 42px
-      height: 58px
-    &.open .navigation .opener
-      background: url('/assets/sprite-table@2x.png') no-repeat -117px 0
-      background-size: 500px 652px
-      width: 23px
-      height: 23px
-  #content .fb-like .like
-    background: url('/assets/sprite-table@2x.png') no-repeat -172px 0
-    background-size: 500px 652px
-    width: 84px
-    height: 118px
-    &:hover
-      background-position: -282px 0
-    &.disabled
-      background: url('/assets/sprite-table@2x.png') no-repeat -282px 0
-      background-size: 500px 652px
-      width: 84px
-      height: 117px
-  .list-services
-    &.small .rollover
-      .icon-01
-        &:hover
-          background: url('/assets/sprite-table@2x.png') no-repeat 0 -418px
-          background-size: 500px 652px
-          &:after
-            background-position: 0 0
-        background: url('/assets/sprite-table@2x.png') no-repeat 0 -418px
-        background-size: 500px 652px
-      .icon-02
-        &:hover
-          background: url('/assets/sprite-table@2x.png') no-repeat -121px -418px
-          background-size: 500px 652px
-          &:after
-            background-position: -29px 0
-        background: url('/assets/sprite-table@2x.png') no-repeat -121px -418px
-        background-size: 500px 652px
-      .icon-03
-        &:hover
-          background: url('/assets/sprite-table@2x.png') no-repeat -243px -418px
-          background-size: 500px 652px
-          &:after
-            background-position: -62px 0
-        background: url('/assets/sprite-table@2x.png') no-repeat -243px -418px
-        background-size: 500px 652px
-      .icon-04
-        &:hover
-          background: url('/assets/sprite-table@2x.png') no-repeat -366px -418px
-          background-size: 500px 652px
-          &:after
-            background-position: -93px 0
-        background: url('/assets/sprite-table@2x.png') no-repeat -366px -418px
-        background-size: 500px 652px
-      .icon-05
-        &:hover
-          background: url('/assets/sprite-table@2x.png') no-repeat 0 -541px
-          background-size: 500px 652px
-          &:after
-            background-position: -122px 0
-        background: url('/assets/sprite-table@2x.png') no-repeat 0 -541px
-        background-size: 500px 652px
-      .icon-06
-        &:hover
-          background: url('/assets/sprite-table@2x.png') no-repeat -121px -541px
-          background-size: 500px 652px
-          &:after
-            background-position: -149px 0
-        background: url('/assets/sprite-table@2x.png') no-repeat -121px -541px
-        background-size: 500px 652px
-      .more
-        &:hover:after
-          background: url('/assets/sprite-list-services.png') no-repeat 0 -9999px
-    .rollover
-      .icon-01
-        &:hover
-          background: url('/assets/sprite-table@2x.png') no-repeat 0 -128px
-          background-size: 500px 652px
-        background: url('/assets/sprite-table@2x.png') no-repeat 0 -128px
-        background-size: 500px 652px
-      .icon-02
-        &:hover
-          background: url('/assets/sprite-table@2x.png') no-repeat -152px -128px
-          background-size: 500px 652px
-        background: url('/assets/sprite-table@2x.png') no-repeat -152px -128px
-        background-size: 500px 652px
-      .icon-03
-        &:hover
-          background: url('/assets/sprite-table@2x.png') no-repeat -298px -127px
-          background-size: 500px 652px
-        background: url('/assets/sprite-table@2x.png') no-repeat -298px -127px
-        background-size: 500px 652px
-      .icon-04
-        &:hover
-          background: url('/assets/sprite-table@2x.png') no-repeat 0 -272px
-          background-size: 500px 652px
-        background: url('/assets/sprite-table@2x.png') no-repeat 0 -272px
-        background-size: 500px 652px
-      .icon-05
-        &:hover
-          background: url('/assets/sprite-table@2x.png') no-repeat -152px -272px
-          background-size: 500px 652px
-        background: url('/assets/sprite-table@2x.png') no-repeat -152px -272px
-        background-size: 500px 652px
-      .icon-06
-        &:hover
-          background: url('/assets/sprite-table@2x.png') no-repeat -298px -272px
-          background-size: 500px 652px
-        background: url('/assets/sprite-table@2x.png') no-repeat -298px -272px
-        background-size: 500px 652px
+@media (max-width: 940px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 940px) and (-o-min-device-pixel-ratio: 3 / 2), (max-width: 940px) and (min-resolution: 144dpi)
   #content
-    .visual
-      .icon-01
-        background: url('/assets/sprite-visual-medium2x.png') no-repeat -260px 0
-        background-size: 800px 124px
-      .icon-02
-        background: url('/assets/sprite-visual-medium2x.png') no-repeat -516px 0
-        background-size: 800px 124px
-      .icon-03
-        background: url('/assets/sprite-visual-medium2x.png') no-repeat -389px 0
-        background-size: 800px 124px
-      .icon-04
-        background: url('/assets/sprite-visual-medium2x.png') no-repeat 0 0
-        background-size: 800px 124px
-      .icon-05
-        background: url('/assets/sprite-visual-medium2x.png') no-repeat -129px 0
-        background-size: 800px 124px
-      .icon-06
-        background: url('/assets/sprite-visual-medium2x.png') no-repeat -675px 0
-        background-size: 800px 124px
-    .list-products
-      h2:after
-        background: url('/assets/sprite-table@2x.png') no-repeat -379px 0
-        background-size: 500px 652px
-        width: 21px
-        height: 24px
-      .icon-01:after
-        background: url('/assets/sprite-table@2x.png') no-repeat -437px -56px
-        background-size: 500px 652px
-      .icon-02:after
-        background: url('/assets/sprite-table@2x.png') no-repeat -464px -56px
-        background-size: 500px 652px
-      .icon-03:after
-        background: url('/assets/sprite-table@2x.png') no-repeat -381px -82px
-        background-size: 500px 652px
-      .icon-04:after
-        background: url('/assets/sprite-table@2x.png') no-repeat -407px -82px
-        background-size: 500px 652px
-      .icon-05:after
-        background: url('/assets/sprite-table@2x.png') no-repeat -437px -133px
-        background-size: 500px 652px
-      .icon-06:after
-        background: url('/assets/sprite-table@2x.png') no-repeat -477px -133px
-        background-size: 500px 652px
-      .icon-07:after
-        background: url('/assets/sprite-table@2x.png') no-repeat -438px -160px
-        background-size: 500px 652px
-      .icon-08:after
-        background: url('/assets/sprite-table@2x.png') no-repeat -481px -160px
-        background-size: 500px 652px
-      .icon-09:after
-        background: url('/assets/sprite-table@2x.png') no-repeat -435px -82px
-        background-size: 500px 652px
-      .icon-10:after
-        background: url('/assets/sprite-table@2x.png') no-repeat -464px -82px
-        background-size: 500px 652px
-      .icon-11:after
-        background: url('/assets/sprite-table@2x.png') no-repeat -440px -108px
-        background-size: 500px 652px
-      .icon-12:after
-        background: url('/assets/sprite-table@2x.png') no-repeat -473px -108px
-        background-size: 500px 652px
-      .icon-13:after
-        background: url('/assets/sprite-table@2x.png') no-repeat -379px 0
-        background-size: 500px 652px
-      .icon-14:after
-        background: url('/assets/sprite-table@2x.png') no-repeat -406px 0
-        background-size: 500px 652px
-      .icon-15:after
-        background: url('/assets/sprite-table@2x.png') no-repeat -433px 0
-        background-size: 500px 652px
-      .icon-16:after
-        background: url('/assets/sprite-table@2x.png') no-repeat -460px 0
-        background-size: 500px 652px
-      .icon-17:after
-        background: url('/assets/sprite-table@2x.png') no-repeat -377px -28px
-        background-size: 500px 652px
-      .icon-18:after
-        background: url('/assets/sprite-table@2x.png') no-repeat -405px -28px
-        background-size: 500px 652px
-      .icon-19:after
-        background: url('/assets/sprite-table@2x.png') no-repeat -433px -28px
-        background-size: 500px 652px
-      .icon-20:after
-        background: url('/assets/sprite-table@2x.png') no-repeat -458px -27px
-        background-size: 500px 652px
-      .icon-21:after
-        background: url('/assets/sprite-table@2x.png') no-repeat -378px -56px
-        background-size: 500px 652px
-      .icon-22:after
-        background: url('/assets/sprite-table@2x.png') no-repeat -408px -56px
-        background-size: 500px 652px
-    .contact
-      .company:after
-        background: url('/assets/sprite-table@2x.png') no-repeat -8px -71px
-        background-size: 500px 652px
-      .social
-        .linkedin
-          &:after
-            background: url('/assets/sprite-table@2x.png') no-repeat -438px -276px
-            background-size: 500px 652px
-          &:hover:after
-            background: url('/assets/sprite-table@2x.png') no-repeat -471px -276px
-            background-size: 500px 652px
-        .facebook
-          &:after
-            background: url('/assets/sprite-table@2x.png') no-repeat -438px -319px
-            background-size: 500px 652px
-          &:hover:after
-            background: url('/assets/sprite-table@2x.png') no-repeat -479px -319px
-            background-size: 500px 652px
-        .pinterest
-          &:after
-            background: url('/assets/sprite-table@2x.png') no-repeat -438px -364px
-            background-size: 500px 652px
-          &:hover:after
-            background: url('/assets/sprite-table@2x.png') no-repeat -478px -364px
-            background-size: 500px 652px
+    .fb-like .like
+      background: url(/assets/sprite2-tablet2x.png) no-repeat -450px 0
+      background-size: 600px 600px
+      width: 84px
+      height: 118px
+      &:hover
+        background: url(/assets/sprite2-tablet2x.png) no-repeat -450px 0
+        background-size: 600px 600px
+        width: 84px
+        height: 118px
+      &.disabled
+        background: url(/assets/sprite2-tablet2x.png) no-repeat 0 -150px
+        background-size: 600px 600px
+        width: 84px
+        height: 118px
+    .visual .icon
+      background: url(/assets/sprite2-tablet2x.png) no-repeat
+      background-size: 600px 600px
+  .list-services
+    .rollover .more
+      background: url(/assets/sprite2-tablet2x.png) no-repeat -150px 0
+      background-size: 600px 600px
+      &:hover
+        background: url(/assets/sprite2-tablet2x.png) no-repeat -150px 0
+        background-size: 600px 600px
+    &.small .rollover .more
+      background: url(/assets/sprite2-tablet2x.png) no-repeat -300px 0
+      background-size: 600px 600px
+      &:hover
+        background: url(/assets/sprite2-tablet2x.png) no-repeat -300px 0
+        background-size: 600px 600px
 
 @media only screen and (max-width: 720px)
   #content
@@ -2496,23 +2544,23 @@ input
     .sub-logo
       top: 255px
       margin: 0 0 0 -41px
-      background: url('/assets/sprite-mobile.png') no-repeat 0 0
+      background: url('/assets/sprite2-mobile.png') no-repeat 0 -150px
       width: 81px
       height: 15px
     .navigation .opener
-      background: url('/assets/sprite-mobile.png') no-repeat -50px -24px
-      width: 19px
-      height: 19px
+      background-size: 20px 20px
+      width: 20px
+      height: 20px
       margin: 21px 0 20px 23px
   .navigation .opener
-    background: url('/assets/sprite-mobile.png') no-repeat -92px 0
-    width: 26px
+    background-size: 27px 18px
+    width: 27px
     height: 18px
     margin: 21px 0 20px 19px
   #header .logo
-    background: url('/assets/sprite-mobile.png') no-repeat 0 -23px
-    width: 31px
-    height: 44px
+    background-size: 33px 45px
+    width: 33px
+    height: 45px
     margin: -24px 0 0 -15px
   #content .video-holder
     img
@@ -2541,32 +2589,51 @@ input
         height: 111px
         margin-left: -56px
         outline: none
-        &:after
-          display: none
+        background: url(/assets/sprite2-mobile.png) no-repeat -100px 0
+        &:hover
+          background: url(/assets/sprite2-mobile.png) no-repeat -100px 0
       .icon-01
-        &:hover
-          background: url('/assets/sprite-mobile.png') no-repeat 0 -70px
-        background: url('/assets/sprite-mobile.png') no-repeat 0 -70px
+        &:after, &:hover:after
+          background-size: 28px 50px
+          width: 28px
+          height: 50px
+          left: 42px
+          top: 30px
       .icon-02
-        &:hover
-          background: url('/assets/sprite-mobile.png') no-repeat -116px -70px
-        background: url('/assets/sprite-mobile.png') no-repeat -116px -70px
+        &:after, &:hover:after
+          background-size: 39px 39px
+          width: 39px
+          height: 39px
+          left: 37px
+          top: 34px
       .icon-03
-        &:hover
-          background: url('/assets/sprite-mobile.png') no-repeat -236px -70px
-        background: url('/assets/sprite-mobile.png') no-repeat -236px -70px
+        &:after, &:hover:after
+          background-size: 45px 43px
+          width: 45px
+          height: 43px
+          left: 31px
+          top: 37px
       .icon-04
-        &:hover
-          background: url('/assets/sprite-mobile.png') no-repeat 0 -189px
-        background: url('/assets/sprite-mobile.png') no-repeat 0 -189px
+        &:after, &:hover:after
+          background-size: 43px 41px
+          width: 43px
+          height: 41px
+          left: 35px
+          top: 39px
       .icon-05
-        &:hover
-          background: url('/assets/sprite-mobile.png') no-repeat -116px -189px
-        background: url('/assets/sprite-mobile.png') no-repeat -116px -189px
+        &:after, &:hover:after
+          background-size: 42px 42px
+          width: 41px
+          height: 41px
+          left: 35px
+          top: 35px
       .icon-06
-        &:hover
-          background: url('/assets/sprite-mobile.png') no-repeat -236px -189px
-        background: url('/assets/sprite-mobile.png') no-repeat -236px -189px
+        &:after, &:hover:after
+          background-size: 45px 26px
+          width: 45px
+          height: 26px
+          left: 36px
+          top: 44px
   #content
     .fb-like
       padding: 54px 10px 83px
@@ -2594,23 +2661,47 @@ input
           width: 37px
           height: 4px
       .icon
-        background: url('/assets/sprite-visual-small.png') no-repeat 0 -9999px
+        background: url(/assets/sprite2-mobile.png) no-repeat
         width: 83px
         height: 83px
         bottom: -41px
         margin-left: -41px
-      .icon-01
-        background-position: 0 0
-      .icon-02
-        background-position: -345px 0
-      .icon-03
-        background-position: -260px 0
-      .icon-04
-        background-position: -86px 0
-      .icon-05
-        background-position: -173px 0
-      .icon-06
-        background-position: -435px 0
+      .icon-01:after
+        background: url(/assets/ico46.svg) no-repeat
+        background-size: 31px 31px
+        width: 31px
+        height: 31px
+        margin: -15px 0 0 -16px
+      .icon-02:after
+        background: url(/assets/ico41.svg) no-repeat
+        background-size: 34px 33px
+        width: 34px
+        height: 33px
+        margin: -16px 0 0 -19px
+      .icon-03:after
+        background: url(/assets/ico42.svg) no-repeat
+        background-size: 21px 37px
+        width: 21px
+        height: 37px
+        margin: -19px 0 0 -11px
+      .icon-04:after
+        background: url(/assets/ico45.svg) no-repeat
+        background-size: 29px 29px
+        width: 29px
+        height: 29px
+        margin: -15px 0 0 -15px
+      .icon-05:after
+        background: url(/assets/ico44.svg) no-repeat
+        background-size: 32px 31px
+        width: 32px
+        height: 31px
+        margin: -13px 0 0 -17px
+      .icon-06:after
+        background: url(/assets/ico40.svg) no-repeat
+        background-size: 35px 19px
+        width: 35px
+        height: 19px
+        margin: -10px 0 0 -16px
     .block-introduction
       h1
         font-size: 30px
@@ -2640,7 +2731,6 @@ input
         left: 50%
         margin-left: -14px
         top: -44px
-        background: url('/assets/sprite-mobile.png') no-repeat 0 -9999px
         width: 29px
         height: 31px
       p
@@ -2648,166 +2738,201 @@ input
         font-size: 15px
         line-height: 19px
       .icon-01:after
-        background-position: -347px 0
+        background: url(/assets/ico01.svg) no-repeat
+        background-size: 29px 34px
         width: 29px
-        height: 31px
-        margin-left: -16px
-        top: -46px
-      .icon-02:after
-        background-position: -385px 0
-        width: 34px
-        height: 33px
-      .icon-03:after
-        background-position: -430px 0
-        width: 29px
-        height: 35px
-        margin-left: -15px
-        top: -50px
-      .icon-04:after
-        background-position: -466px 0
-        width: 34px
-        height: 33px
-        margin-left: -17px
-      .icon-05:after
-        background-position: -348px -208px
-        width: 37px
-        height: 33px
-        margin-left: -18px
-        top: -39px
-      .icon-06:after
-        background-position: -386px -208px
-        width: 33px
         height: 34px
-        margin-left: -17px
+        margin-left: -16px
         top: -48px
-      .icon-07:after
-        background-position: -423px -208px
-        width: 34px
-        height: 33px
-        margin-left: -17px
-        top: -46px
-      .icon-08:after
-        background-position: -472px -208px
-        width: 28px
-        height: 39px
-        margin-left: -15px
-        top: -53px
-      .icon-09:after
-        background-position: -349px -174px
-        width: 30px
-        height: 31px
-        margin-left: -15px
-      .icon-10:after
-        background-position: -386px -174px
+      .icon-02:after
+        background: url(/assets/ico10.svg) no-repeat
+        background-size: 36px 36px
         width: 36px
-        height: 31px
-        margin-left: -17px
-      .icon-11:after
-        background-position: -426px -174px
-        width: 35px
-        height: 31px
-        margin-left: -18px
-      .icon-12:after
-        background-position: -465px -174px
-        width: 35px
-        height: 31px
-        margin-left: -17px
-      .icon-13:after
-        background-position: -346px -38px
-        width: 35px
-        height: 38px
-        margin-left: -19px
-        top: -52px
-      .icon-14:after
-        background-position: -385px -38px
-        width: 34px
-        height: 40px
-        margin-left: -17px
-        top: -49px
-      .icon-15:after
-        background-position: -430px -39px
-        width: 38px
-        height: 37px
-        margin-left: -19px
-        top: -50px
-      .icon-16:after
-        background-position: -347px -89px
-        width: 52px
-        height: 25px
-        margin-left: -25px
-        top: -45px
-      .icon-17:after
-        background-position: -403px -89px
-        width: 37px
-        height: 39px
+        height: 36px
         margin-left: -18px
         top: -51px
-      .icon-18:after
-        background-position: -455px -89px
-        width: 35px
-        height: 40px
-        margin-left: -17px
-        top: -52px
-      .icon-19:after
-        background-position: -346px -131px
-        width: 25px
-        height: 39px
-        margin-left: -13px
-        top: -49px
-      .icon-20:after
-        background-position: -372px -131px
-        width: 40px
-        height: 40px
-        margin-left: -21px
-        top: -56px
-      .icon-21:after
-        background-position: -415px -131px
-        width: 38px
+      .icon-03:after
+        background: url(/assets/ico09.svg) no-repeat
+        background-size: 31px 38px
+        width: 31px
         height: 38px
-        margin-left: -18px
-        top: -52px
-      .icon-22:after
-        background-position: -460px -131px
-        width: 40px
-        height: 35px
-        margin-left: -21px
-        top: -46px
-      .icon-23:after
-        background-position: -347px -249px
-        width: 40px
-        height: 37px
-        margin-left: -21px
-        top: -48px
-      .icon-24:after
-        background-position: -388px -249px
-        width: 41px
-        height: 38px
-        margin-left: -21px
-        top: -50px
-      .icon-25:after
-        background-position: -432px -249px
-        width: 23px
-        height: 35px
-        margin-left: -11px
-        top: -48px
-      .icon-26:after
-        background-position: -459px -249px
-        width: 41px
-        height: 22px
-        margin-left: -21px
-        top: -42px
-      .icon-27:after
-        background-position: -477px -41px
-        width: 16px
-        height: 34px
-        margin-left: -8px
-        top: -49px
-      .icon-28:after
-        background-position: -304px 0
+        margin-left: -16px
+        top: -53px
+      .icon-04:after
+        background: url(/assets/ico08.svg) no-repeat
+        background-size: 37px 36px
         width: 37px
+        height: 36px
+        margin-left: -19px
+        top: -50px
+      .icon-05:after
+        background: url(/assets/ico32.svg) no-repeat
+        background-size: 38px 27px
+        width: 38px
+        height: 27px
+        margin-left: -20px
+        top: -42px
+      .icon-06:after
+        background: url(/assets/ico33.svg) no-repeat
+        background-size: 36px 36px
+        width: 36px
+        height: 36px
+        margin-left: -18px
+        top: -49px
+      .icon-07:after
+        background: url(/assets/ico34.svg) no-repeat
+        background-size: 36px 38px
+        width: 36px
+        height: 38px
+        margin-left: -17px
+        top: -50px
+      .icon-08:after
+        background: url(/assets/ico35.svg) no-repeat
+        background-size: 31px 41px
+        width: 31px
+        height: 41px
+        margin-left: -16px
+        top: -55px
+      .icon-09:after
+        background: url(/assets/ico36.svg) no-repeat
+        background-size: 32px 32px
+        width: 32px
+        height: 32px
+        margin-left: -15px
+        top: -46px
+      .icon-10:after
+        background: url(/assets/ico37.svg) no-repeat
+        background-size: 37px 31px
+        width: 37px
+        height: 31px
+        margin-left: -17px
+        top: -45px
+      .icon-11:after
+        background: url(/assets/ico21.svg) no-repeat
+        background-size: 38px 33px
+        width: 38px
         height: 33px
         margin-left: -18px
         top: -47px
+      .icon-12:after
+        background: url(/assets/ico20.svg) no-repeat
+        background-size: 39px 33px
+        width: 39px
+        height: 33px
+        margin-left: -18px
+        top: -46px
+      .icon-13:after
+        background: url(/assets/ico14.svg) no-repeat
+        background-size: 36px 41px
+        width: 36px
+        height: 41px
+        margin-left: -20px
+        top: -53px
+      .icon-14:after
+        background: url(/assets/ico13.svg) no-repeat
+        background-size: 36px 41px
+        width: 36px
+        height: 41px
+        margin-left: -17px
+        top: -52px
+      .icon-15:after
+        background: url(/assets/ico11.svg) no-repeat
+        background-size: 40px 39px
+        width: 40px
+        height: 39px
+        margin-left: -21px
+        top: -52px
+      .icon-16:after
+        background: url(/assets/ico12.svg) no-repeat
+        background-size: 54px 25px
+        width: 54px
+        height: 25px
+        margin-left: -26px
+        top: -43px
+      .icon-17:after
+        background: url(/assets/ico19.svg) no-repeat
+        background-size: 41px 41px
+        width: 41px
+        height: 41px
+        margin-left: -20px
+        top: -52px
+      .icon-18:after
+        background: url(/assets/ico18.svg) no-repeat
+        background-size: 39px 41px
+        width: 39px
+        height: 41px
+        margin-left: -20px
+        top: -58px
+      .icon-19:after
+        background: url(/assets/ico17.svg) no-repeat
+        background-size: 27px 41px
+        width: 27px
+        height: 41px
+        margin-left: -14px
+        top: -52px
+      .icon-20:after
+        background: url(/assets/ico16.svg) no-repeat
+        background-size: 42px 42px
+        width: 42px
+        height: 42px
+        margin-left: -21px
+        top: -56px
+      .icon-21:after
+        background: url(/assets/ico15.svg) no-repeat
+        background-size: 41px 40px
+        width: 41px
+        height: 40px
+        margin-left: -21px
+        top: -54px
+      .icon-22:after
+        background: url(/assets/ico43.svg) no-repeat
+        background-size: 41px 36px
+        width: 41px
+        height: 36px
+        margin-left: -21px
+        top: -46px
+      .icon-23:after
+        background: url(/assets/ico23.svg) no-repeat
+        background-size: 42px 38px
+        width: 42px
+        height: 38px
+        margin-left: -22px
+        top: -49px
+      .icon-24:after
+        background: url(/assets/ico26.svg) no-repeat
+        background-size: 41px 39px
+        width: 41px
+        height: 39px
+        margin-left: -21px
+        top: -54px
+      .icon-25:after
+        background: url(/assets/ico24.svg) no-repeat
+        background-size: 27px 38px
+        width: 27px
+        height: 38px
+        margin-left: -13px
+        top: -53px
+      .icon-26:after
+        background: url(/assets/ico27.svg) no-repeat
+        background-size: 44px 23px
+        width: 44px
+        height: 23px
+        margin-left: -22px
+        top: -40px
+      .icon-27:after
+        background: url(/assets/ico25.svg) no-repeat
+        background-size: 18px 35px
+        width: 18px
+        height: 35px
+        margin-left: -10px
+        top: -50px
+      .icon-28:after
+        background: url(/assets/ico28.svg) no-repeat
+        background-size: 38px 35px
+        width: 38px
+        height: 35px
+        margin-left: -18px
+        top: -49px
     .list-customers
       padding: 62px 0 15px
       .block
@@ -2838,38 +2963,13 @@ input
   .list-services.small
     li
       width: 50%
-    .rollover
-      .more
-        background: url('/assets/sprite-table.png') no-repeat 0 -9999px
-        width: 111px
-        height: 111px
-        margin: -25% 0 0 -55px
-        &:after
-          display: none
-      .icon-01
-        &:hover
-          background-position: 0 -418px
-        background-position: 0 -418px
-      .icon-02
-        &:hover
-          background-position: -121px -418px
-        background-position: -121px -418px
-      .icon-03
-        &:hover
-          background-position: -243px -418px
-        background-position: -243px -418px
-      .icon-04
-        &:hover
-          background-position: -366px -418px
-        background-position: -366px -418px
-      .icon-05
-        &:hover
-          background-position: 0 -541px
-        background-position: 0 -541px
-      .icon-06
-        &:hover
-          background-position: -121px -541px
-        background-position: -121px -541px
+    .rollover .more
+      width: 112px
+      height: 111px
+      margin: -25% 0 0 -55px
+      background: url(/assets/sprite2-mobile.png) no-repeat -250px 0
+      &:hover
+        background: url(/assets/sprite2-mobile.png) no-repeat -250px 0
   #content
     .form-send
       float: none
@@ -2901,10 +3001,10 @@ input
       .company
         padding: 0 0 0 50px
         &:after
-          background: url('/assets/sprite-mobile.png') no-repeat -136px 0
+          background-size: 23px 32px
           height: 32px
           top: -8px
-          width: 27px
+          width: 23px
           left: 14px
       address
         padding-left: 50px
@@ -3018,203 +3118,20 @@ input
     margin: -8px 0 0 -55px
 
 /* retina 640px
-
-@media (max-width: 640px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 640px) and (min-resolution: 144dpi)
-  #header.open
-    .sub-logo
-      background: url('/assets/sprite-mobile@2x.png') no-repeat 0 0
-      background-size: 500px 300px
-    .navigation .opener
-      background: url('/assets/sprite-mobile@2x.png') no-repeat -50px -24px
-      background-size: 500px 300px
-  .navigation .opener
-    background: url('/assets/sprite-mobile@2x.png') no-repeat -92px 0
-    background-size: 500px 300px
-  #header .logo
-    background: url('/assets/sprite-mobile@2x.png') no-repeat 0 -23px
-    background-size: 500px 300px
-  .list-services .rollover
-    .icon-01
+@media (max-width: 640px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 640px) and (-o-min-device-pixel-ratio: 3 / 2), (max-width: 640px) and (min-resolution: 144dpi)
+  #header.open .sub-logo
+    background: url('/assets/sprite2-mobile2x.png') no-repeat 0 -150px
+    background-size: 400px 400px
+  .list-services
+    .rollover .more
+      background: url(/assets/sprite2-mobile2x.png) no-repeat -100px 0
+      background-size: 400px 400px
       &:hover
-        background: url('/assets/sprite-mobile@2x.png') no-repeat 0 -70px
-        background-size: 500px 300px
-      background: url('/assets/sprite-mobile@2x.png') no-repeat 0 -70px
-      background-size: 500px 300px
-    .icon-02
+        background: url(/assets/sprite2-mobile2x.png) no-repeat -100px 0
+        background-size: 400px 400px
+    &.small .rollover .more
+      background: url(/assets/sprite2-mobile2x.png) no-repeat -250px 0
+      background-size: 400px 400px
       &:hover
-        background: url('/assets/sprite-mobile@2x.png') no-repeat -116px -70px
-        background-size: 500px 300px
-      background: url('/assets/sprite-mobile@2x.png') no-repeat -116px -70px
-      background-size: 500px 300px
-    .icon-03
-      &:hover
-        background: url('/assets/sprite-mobile@2x.png') no-repeat -236px -70px
-        background-size: 500px 300px
-      background: url('/assets/sprite-mobile@2x.png') no-repeat -236px -70px
-      background-size: 500px 300px
-    .icon-04
-      &:hover
-        background: url('/assets/sprite-mobile@2x.png') no-repeat 0 -189px
-        background-size: 500px 300px
-      background: url('/assets/sprite-mobile@2x.png') no-repeat 0 -189px
-      background-size: 500px 300px
-    .icon-05
-      &:hover
-        background: url('/assets/sprite-mobile@2x.png') no-repeat -116px -189px
-        background-size: 500px 300px
-      background: url('/assets/sprite-mobile@2x.png') no-repeat -116px -189px
-      background-size: 500px 300px
-    .icon-06
-      &:hover
-        background: url('/assets/sprite-mobile@2x.png') no-repeat -236px -189px
-        background-size: 500px 300px
-      background: url('/assets/sprite-mobile@2x.png') no-repeat -236px -189px
-      background-size: 500px 300px
-  #content
-    .visual
-      .icon-01
-        background: url('/assets/sprite-visual-small@2x.png') no-repeat 0 0
-        background-size: 540px 83px
-      .icon-02
-        background: url('/assets/sprite-visual-small@2x.png') no-repeat -346px 0
-        background-size: 540px 83px
-      .icon-03
-        background: url('/assets/sprite-visual-small@2x.png') no-repeat -260px 0
-        background-size: 540px 83px
-      .icon-04
-        background: url('/assets/sprite-visual-small@2x.png') no-repeat -86px 0
-        background-size: 540px 83px
-      .icon-05
-        background: url('/assets/sprite-visual-small@2x.png') no-repeat -174px 0
-        background-size: 540px 83px
-      .icon-06
-        background: url('/assets/sprite-visual-small@2x.png') no-repeat -456px 0
-        background-size: 540px 83px
-    .list-products
-      h2:after
-        background: url('/assets/sprite-mobile@2x.png') no-repeat 0 -9999px
-        background-size: 500px 300px
-      .icon-01:after
-        background: url('/assets/sprite-mobile@2x.png') no-repeat -347px 0
-        background-size: 500px 300px
-      .icon-02:after
-        background: url('/assets/sprite-mobile@2x.png') no-repeat -385px 0
-        background-size: 500px 300px
-      .icon-03:after
-        background: url('/assets/sprite-mobile@2x.png') no-repeat -430px 0
-        background-size: 500px 300px
-      .icon-04:after
-        background: url('/assets/sprite-mobile@2x.png') no-repeat -466px 0
-        background-size: 500px 300px
-      .icon-05:after
-        background: url('/assets/sprite-mobile@2x.png') no-repeat -348px -208px
-        background-size: 500px 300px
-      .icon-06:after
-        background: url('/assets/sprite-mobile@2x.png') no-repeat -386px -208px
-        background-size: 500px 300px
-      .icon-07:after
-        background: url('/assets/sprite-mobile@2x.png') no-repeat -423px -208px
-        background-size: 500px 300px
-      .icon-08:after
-        background: url('/assets/sprite-mobile@2x.png') no-repeat -472px -208px
-        background-size: 500px 300px
-      .icon-09:after
-        background: url('/assets/sprite-mobile@2x.png') no-repeat -349px -174px
-        background-size: 500px 300px
-      .icon-10:after
-        background: url('/assets/sprite-mobile@2x.png') no-repeat -386px -174px
-        background-size: 500px 300px
-      .icon-11:after
-        background: url('/assets/sprite-mobile@2x.png') no-repeat -426px -174px
-        background-size: 500px 300px
-      .icon-12:after
-        background: url('/assets/sprite-mobile@2x.png') no-repeat -465px -174px
-        background-size: 500px 300px
-      .icon-13:after
-        background: url('/assets/sprite-mobile@2x.png') no-repeat -346px -38px
-        background-size: 500px 300px
-      .icon-14:after
-        background: url('/assets/sprite-mobile@2x.png') no-repeat -385px -38px
-        background-size: 500px 300px
-      .icon-15:after
-        background: url('/assets/sprite-mobile@2x.png') no-repeat -430px -39px
-        background-size: 500px 300px
-      .icon-16:after
-        background: url('/assets/sprite-mobile@2x.png') no-repeat -347px -89px
-        background-size: 500px 300px
-      .icon-17:after
-        background: url('/assets/sprite-mobile@2x.png') no-repeat -403px -89px
-        background-size: 500px 300px
-      .icon-18:after
-        background: url('/assets/sprite-mobile@2x.png') no-repeat -455px -89px
-        background-size: 500px 300px
-      .icon-19:after
-        background: url('/assets/sprite-mobile@2x.png') no-repeat -346px -131px
-        background-size: 500px 300px
-      .icon-20:after
-        background: url('/assets/sprite-mobile@2x.png') no-repeat -372px -131px
-        background-size: 500px 300px
-      .icon-21:after
-        background: url('/assets/sprite-mobile@2x.png') no-repeat -415px -131px
-        background-size: 500px 300px
-      .icon-22:after
-        background: url('/assets/sprite-mobile@2x.png') no-repeat -460px -131px
-        background-size: 500px 300px
-      .icon-23:after
-        background: url('/assets/sprite-mobile@2x.png') no-repeat -347px -249px
-        background-size: 500px 300px
-      .icon-24:after
-        background: url('/assets/sprite-mobile@2x.png') no-repeat -388px -249px
-        background-size: 500px 300px
-      .icon-25:after
-        background: url('/assets/sprite-mobile@2x.png') no-repeat -432px -249px
-        background-size: 500px 300px
-      .icon-26:after
-        background: url('/assets/sprite-mobile@2x.png') no-repeat -459px -249px
-        background-size: 500px 300px
-      .icon-27:after
-        background: url('/assets/sprite-mobile@2x.png') no-repeat -477px -41px
-        background-size: 500px 300px
-      .icon-28:after
-        background: url('/assets/sprite-mobile@2x.png') no-repeat -304px 0
-        background-size: 500px 300px
-  .list-services.small .rollover
-    .icon-01
-      &:hover
-        background: url('/assets/sprite-table@2x.png') no-repeat 0 -418px
-        background-size: 500px 652px
-      background: url('/assets/sprite-table@2x.png') no-repeat 0 -418px
-      background-size: 500px 652px
-    .icon-02
-      &:hover
-        background: url('/assets/sprite-table@2x.png') no-repeat -121px -418px
-        background-size: 500px 652px
-      background: url('/assets/sprite-table@2x.png') no-repeat -121px -418px
-      background-size: 500px 652px
-    .icon-03
-      &:hover
-        background: url('/assets/sprite-table@2x.png') no-repeat -243px -418px
-        background-size: 500px 652px
-      background: url('/assets/sprite-table@2x.png') no-repeat -243px -418px
-      background-size: 500px 652px
-    .icon-04
-      &:hover
-        background: url('/assets/sprite-table@2x.png') no-repeat -366px -418px
-        background-size: 500px 652px
-      background: url('/assets/sprite-table@2x.png') no-repeat -366px -418px
-      background-size: 500px 652px
-    .icon-05
-      &:hover
-        background: url('/assets/sprite-table@2x.png') no-repeat 0 -541px
-        background-size: 500px 652px
-      background: url('/assets/sprite-table@2x.png') no-repeat 0 -541px
-      background-size: 500px 652px
-    .icon-06
-      &:hover
-        background: url('/assets/sprite-table@2x.png') no-repeat -121px -541px
-        background-size: 500px 652px
-      background: url('/assets/sprite-table@2x.png') no-repeat -121px -541px
-      background-size: 500px 652px
-  #content .contact .company:after
-    background: url('/assets/sprite-mobile@2x.png') no-repeat -136px 0
-    background-size: 500px 300px
+        background: url(/assets/sprite2-mobile2x.png) no-repeat -250px 0
+        background-size: 400px 400px

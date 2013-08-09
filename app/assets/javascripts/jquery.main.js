@@ -349,14 +349,16 @@ $(document).ready(function (){
   navCollapse = function(){
   
     $(window).scroll(function(){
-      var scrollPos = $(document).scrollTop();
-    
-      if (scrollPos >= 92){
-        $('#header').css({'top':'-92px','position':'fixed'});
-        $('#content').css({'margin-top':'158px'});
-      } else if (scrollPos < 92){
-        $('#header').css({'top':'0','position':'relative'});
-        $('#content').css({'margin-top':'0'});
+      if($('.opener').css('display') == 'none'){
+        var scrollPos = $(document).scrollTop();
+      
+        if (scrollPos >= 92){
+          $('#header').css({'top':'-92px','position':'fixed'});
+          $('#content').css({'margin-top':'158px'});
+        } else if (scrollPos < 92){
+          $('#header').css({'top':'0','position':'relative'});
+          $('#content').css({'margin-top':'0'});
+        }
       }
     });
   }

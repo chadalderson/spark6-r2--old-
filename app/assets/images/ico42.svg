@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY ns_extend "http://ns.adobe.com/Extensibility/1.0/">
+	<!ENTITY ns_ai "http://ns.adobe.com/AdobeIllustrator/10.0/">
+	<!ENTITY ns_graphs "http://ns.adobe.com/Graphs/1.0/">
+	<!ENTITY ns_vars "http://ns.adobe.com/Variables/1.0/">
+	<!ENTITY ns_imrep "http://ns.adobe.com/ImageReplacement/1.0/">
+	<!ENTITY ns_sfw "http://ns.adobe.com/SaveForWeb/1.0/">
+	<!ENTITY ns_custom "http://ns.adobe.com/GenericCustomNamespace/1.0/">
+	<!ENTITY ns_adobe_xpath "http://ns.adobe.com/XPath/1.0/">
+]>
+<svg version="1.1" id="Layer_1" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="62px" height="109px"
+	 viewBox="0 0 62 109" enable-background="new 0 0 62 109" xml:space="preserve">
+<metadata>
+	<sfw  xmlns="&ns_sfw;">
+		<slices></slices>
+		<sliceSourceBounds  y="-675" x="574" width="58" height="107" bottomLeftOrigin="true"></sliceSourceBounds>
+	</sfw>
+</metadata>
+<path id="iphone_2_" fill="#EAEAEA" d="M60.333,12.462c0-6.146-4.982-11.128-11.128-11.128H13.461
+	c-6.146,0-11.128,4.982-11.128,11.128v84.743c0,6.146,4.982,11.129,11.128,11.129h35.744c6.146,0,11.128-4.982,11.128-11.129V12.462
+	z M31.267,103.829c-3.688,0-6.677-2.988-6.677-6.678c0-3.688,2.989-6.677,6.677-6.677c3.688,0,6.677,2.988,6.677,6.677
+	C37.944,100.84,34.955,103.829,31.267,103.829z M9.333,86.333v-67h44v67H9.333z"/>
+</svg>
