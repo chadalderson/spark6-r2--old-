@@ -19,14 +19,14 @@
 	<!-- contact-holder -->
 	<div class="contact-holder">
 		<!-- form-send -->		
-		<%= form_for @message, url: contact_path, html: {class: "form-send"} do |form| %>
+		<%= form_for @message, url: contact_path, html: {class: "form-send", autocomplete: "on"} do |form| %>
 		  <fieldset>  
-        <%= form.text_field :name, type: "text", placeholder: "Your Name" %>
-        <%= form.text_field :email, type: "email", placeholder: "Email Address" %>
-        <%= form.text_field :company, type: "text", class: "none", placeholder: "Company" %>
-        <%= form.text_field :website, type: "text", class: "none", placeholder: "Website" %>
-        <%= form.text_field :phone, type: "text", class: "none", placeholder: "Phone" %>
-        <%= form.text_area :message, cols: "3", rows: "1", placeholder: "Message" %>
+        <%= form.text_field :name, type: "text", placeholder: "Your Name", name: "name" %>
+        <%= form.text_field :email, type: "email", placeholder: "Email Address", name: "email" %>
+        <%= form.text_field :company, type: "text", class: "none", placeholder: "Company", name: "company" %>
+        <%= form.text_field :website, type: "text", class: "none", placeholder: "Website", name: "website" %>
+        <%= form.text_field :phone, type: "text", class: "none", placeholder: "Phone", name: "phone" %>
+        <%= form.text_area :message, cols: "3", rows: "1", placeholder: "Message", name: "message" %>
         <%= form.submit "SUBMIT" %>
         <span class="note">Unlock the <strong>First Contact</strong> Achievement!</span>
 		  </fieldset>
