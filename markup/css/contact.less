@@ -1,0 +1,600 @@
+/* Contact CSS Styles */
+@import "global.less";
+
+.container{
+	.jumbotron{
+		&.contact{
+			margin-bottom:0;
+		}
+	}
+}
+
+#contact-page{
+	padding-left:12px;
+	padding-right:12px;
+	margin-bottom:115px;
+
+	.left-col, .right-col{
+		width:50%;
+		float:left; display:block;
+	}
+
+	.left-col{
+		padding:50px;
+	}
+
+	#gmap{
+		width:100%;
+		height:396px;
+	}
+
+	.bgred{
+		background:#ff3000;
+		padding:40px 46px 60px;
+
+		address{
+			font-size:18px;
+			line-height:22px;
+			color:#fff;
+			padding-left:55px;
+			position:relative;
+			margin-bottom:110px;
+
+			.spark-white{
+				width:32px;
+				height:45px;
+				display:block;
+				background:url(../img/logo-single.svg) no-repeat top center;
+				background-size:32px auto;
+				position:absolute;
+				top:-17px; left:3px;
+			}
+
+			strong{
+				font-size:24px;
+				.franklinbold(24px);
+				text-transform:uppercase;
+				margin:15px 0 5px 0;
+				display:block;
+			}
+		}
+
+		.contact-email{
+			float:left; display:block;
+			width:50%;
+			margin-bottom:29px;
+
+			strong, p{
+				font-size:18px;
+				line-height:22px;
+				color:#fff;		
+			}
+
+			strong{
+				display:block;
+				margin-bottom:3px;
+				font-weight:bold;
+			}
+
+			&.last{
+				padding-left:15px;
+			}
+		}
+	}
+
+	#contactForm{
+		p { position:relative }
+		p br { display: none }
+		label  { 
+			position:absolute; 
+			top:11px; left:20px; 
+			font-size:18px; 
+			color:#bbbbbb; 
+			font-weight:normal;
+		}
+		p.textarea{
+			label{
+				top:16px;
+			}
+		}
+
+		button{
+			width:100%;
+			background:#757575;
+			.rounded-corners(4px);
+			text-align:center;
+			color:#989797;
+			text-transform:uppercase;
+			.franklinbold(22px);
+			border:0;
+			margin:8px 0 15px 0;
+			height:57px;
+			.transition();
+
+			&:hover{
+				background:#1aa1ff;
+				color:#fff;
+			}
+		}
+
+		.instructions{
+			text-align:center;
+			font-size:14px;
+			color:#a7a7a7;
+
+			strong{
+				color:#707070;
+			}
+		}
+	}
+
+}
+
+.ie8 #contact-page .bgred address .spark-white{
+	background:url(../img/logo-single.png) no-repeat top center;
+}
+
+.form-group{
+	margin-bottom:18px;
+	p{
+		margin:0;
+	}
+}
+
+.form-control{
+	background:#f4f4f4;
+	border:1px solid #f4f4f4;
+	padding:16px 20px;
+	.rounded-corners(0px);
+	-webkit-box-shadow:none;
+	-moz-box-shadow:none;
+	box-shadow:none;
+	border:0;
+	height:48px;
+	font-size:18px; 
+	color:#575656;
+
+	&:focus, &:active{
+		-webkit-box-shadow:none;
+		-moz-box-shadow:none;
+		box-shadow:none;
+		background:#fbfbfb;
+		border:1px solid #ebebeb;
+	}
+}
+
+textarea.form-control{
+	height:275px;
+}
+
+/* Nav Services for Contact Page */
+	#nav-services{
+		a.thumbnail, .thumbnail:first-child, .thumbnail:last-child{
+			width:33.33333333333333%;
+			height:236px;
+			overflow:hidden;
+		}
+		a.thumbnail{
+			.red-overlay{
+				height:236px;
+			}
+
+			&.hidden{
+				display:block!important;
+				visibility:visible!important;
+			}
+		}
+	}
+
+.social-nav{
+	margin:78px 0 0 0; padding:0px 0 0 3px;
+	overflow:auto;
+
+	li{
+		float:left; display:block;
+		margin-right:42px;
+	}
+
+	a{
+		width:70px;
+		height:70px;
+		display:block;
+		background:#ff3000;
+		border:2px solid #fff;
+		position:relative;
+		.transition();
+
+		span{
+			text-indent:-9999em;
+			display:block;
+			position:absolute;
+			width:40px; height:38px;
+			left:50%; top:50%;
+			margin-top:-19px; margin-left:-20px;
+			background:url(../img/sprite-social.svg) no-repeat 0 0;
+			background-size:110px auto;			
+		}	
+
+		&.linkedin span{
+			background-position:-33px 3px;
+		}
+
+		&.facebook span{
+			background-position:12px 4px;
+		}
+
+		&.pinterest span{
+			background-position:-78px 4px;
+		}
+
+		&:hover{
+			background:#fff;
+		}
+
+
+		&.linkedin:hover span{
+			background-position:-33px -31px;
+		}
+
+		&.facebook:hover span{
+			background-position:12px -31px;
+		}
+
+		&.pinterest:hover span{
+			background-position:-78px -30px;
+		}		
+
+	}
+}
+
+.ie8 .social-nav li a {
+	span{
+		background:url(../img/sprite-social.png) no-repeat 0 0;
+	}	
+	&.linkedin span{
+		background-position:-33px 3px;
+	}
+
+	&.facebook span{
+		background-position:12px 4px;
+	}
+
+	&.pinterest span{
+		background-position:-78px 4px;
+	}
+
+	&:hover{
+		background:#fff;
+	}
+
+
+	&.linkedin:hover span{
+		background-position:-33px -31px;
+	}
+
+	&.facebook:hover span{
+		background-position:12px -31px;
+	}
+
+	&.pinterest:hover span{
+		background-position:-78px -30px;
+	}	
+}
+
+
+
+@media @desktopXXS{
+
+	#contact-page{
+		margin-left:0;
+		margin-right:0;
+		padding-left:0;
+		padding-right:0;
+		margin-bottom:10px;
+
+
+		.left-col, .right-col{
+			float:none;
+			width:100%;
+		}
+
+		.left-col{
+			padding:14px 10px 35px;
+		}
+
+		.right-col{
+			#gmap{
+				height:218px;
+			}
+		}
+
+		.hideTablet{
+			display:none;
+		}
+
+		.form-group{
+			margin-bottom:15px;
+		}
+
+		.bgred{
+			padding-top:34px;
+			padding-bottom:37px;
+			padding-right:15px;
+
+			address{
+				padding-left:0;
+				margin-bottom:75px;
+
+				.spark-white{
+					width:25px;
+					top:-10px; 
+					left:-33px;
+					background-size:25px auto;
+				}
+			}
+
+			.contact-email{
+				float:none;
+				width:100%;
+				&.last{
+					padding-left:0;
+				}
+			}
+		}
+
+		.social-nav{
+			margin-top:50px;
+
+			li{
+				margin-right:14px;
+
+				a{
+					&:hover{
+						background:#fff;
+					}
+
+					&.linkedin:hover span{
+						background-position:-33px -31px;
+					}
+
+					&.facebook:hover span{
+						background-position:12px -31px;
+					}
+
+					&.pinterest:hover span{
+						background-position:-78px -30px;
+					}	
+				}
+			}
+				
+		}
+	}
+	
+}
+
+@media @desktopXS{
+
+	#contact-page {
+		margin-bottom:50px;
+
+		#gmap{
+			height:234px;
+		}
+				
+		.bgred {
+			padding-left:40px;
+			padding-right:40px;
+			address {
+				font-size:15px;
+				margin-bottom:70px;
+				strong{
+					font-size:21px;
+					margin-bottom:0;
+				}
+			}
+
+			.contact-email{
+				width:100%;
+				margin-bottom:2px;
+				padding-left:55px;
+				&.last{
+					padding-left:55px;
+				}
+				strong{
+					font-size:15px;
+				}
+				p{
+					font-size:15px;
+				}
+			}
+		}
+
+		.social-nav{
+			li{
+				margin-right:25px;
+			}
+
+			li:last-child{
+				margin-right:0;
+			}
+		}
+	}	
+
+}
+
+@media @tablet{
+	#contact-page{
+		#contactForm{
+			button{
+				background:#1aa1ff;
+				color:#fff;
+			}
+		}	
+	}
+}
+
+@media @tabletPortrait{
+	.hideTablet{
+		display:none;
+	}
+
+	#contact-page {
+		.left-col{
+			padding:26px;
+			width:50%;
+			float:left;
+			display:block;
+		}
+		.right-col{
+			width:50%;
+			padding:0;
+			float:left;
+			display:block;
+		}
+	}
+
+	#contact-page #gmap{
+		height:262px;
+	}
+
+	#contact-page {
+		margin-bottom:50px;
+
+		#contactForm{
+			button{
+				background:#1aa1ff;
+				color:#fff;
+			}
+		}
+				
+		.bgred {
+			padding-left:40px;
+			padding-right:40px;
+			address {
+				font-size:15px;
+				margin-bottom:70px;
+
+				.spark-white{
+					width:20px;
+					background-size:20px auto;
+					top:-5px;
+					left:-27px;
+				}
+				strong{
+					font-size:21px;
+					margin-bottom:0;
+				}
+			}
+
+			.contact-email{
+				width:100%;
+				margin-bottom:2px;
+				padding-left:0px;
+				&.last{
+					padding-left:0px;
+				}
+				strong{
+					font-size:15px;
+				}
+				p{
+					font-size:15px;
+				}
+			}
+		}
+
+		.social-nav{
+			li{
+				margin-right:25px;
+			}
+
+			li:last-child{
+				margin-right:0;
+			}
+		}
+	}
+}
+
+@media @smartphone{
+
+	#contact-page{
+		margin-left:0;
+		margin-right:0;
+		padding-left:0;
+		padding-right:0;
+		margin-bottom:10px;
+
+		#contactForm{
+			button{
+				background:#1aa1ff;
+				color:#fff;
+			}
+		}
+
+		.left-col, .right-col{
+			float:none;
+			width:100%;
+		}
+
+		.left-col{
+			padding:14px 10px 35px;
+		}
+
+		.right-col{
+			#gmap{
+				height:218px;
+			}
+		}
+
+		.hideTablet{
+			display:none;
+		}
+
+		.form-group{
+			margin-bottom:15px;
+		}
+
+		.bgred{
+			padding-top:34px;
+			padding-bottom:37px;
+			padding-right:15px;
+
+			address{
+				padding-left:0;
+				margin-bottom:75px;
+
+				.spark-white{
+					width:25px;
+					top:-10px; 
+					left:-33px;
+					background-size:25px auto;
+				}
+			}
+
+			.contact-email{
+				float:none;
+				width:100%;
+				&.last{
+					padding-left:0;
+				}
+			}
+		}
+
+		.social-nav{
+			margin-top:50px;
+
+			li{
+				margin-right:14px;
+			}
+		}
+	}
+
+}
+
+/* Smartphone Landscape */
+@media @smartphoneLandscape{
+	
+	.container{
+		width:480px;
+	}
+
+}

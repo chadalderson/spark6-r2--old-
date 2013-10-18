@@ -1,0 +1,92 @@
+/* UX CSS Styles */
+.container .featured span {
+  position: absolute;
+  left: 50%;
+  bottom: -23px;
+  z-index: 105;
+}
+.container .featured span.icon-ux {
+  width: 42px;
+  height: 42px;
+  margin-left: -23.5px;
+  background: url(../img/ux.svg) no-repeat 0 0;
+  background-size: 42px auto;
+}
+.ie8 .container .featured span.icon-ux {
+  background: url(../img/ux.png) no-repeat 0 0;
+}
+.ie8 .icon-u {
+  background: url(../img/sprite-ux.png) no-repeat 0 0;
+}
+.icon-u {
+  background: url(../img/sprite-ux.svg) no-repeat 0 0;
+  position: absolute;
+  left: -36px;
+  top: 18px;
+  background-size: 160px auto;
+  width: 35px;
+  height: 38px;
+}
+.icon-u.icon-visual {
+  width: 40px;
+  left: -40px;
+  background-position: 0 0;
+}
+.icon-u.icon-interaction {
+  background-position: -90px 0;
+}
+.icon-u.icon-architecture {
+  background-position: -48px 0;
+}
+.icon-u.icon-usability {
+  background-position: -125px 0;
+}
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+  .icon-u {
+    background: url(../img/sprite-ux.svg) no-repeat 0 0;
+    position: absolute;
+    left: -36px;
+    top: 14px;
+    background-size: 110px auto;
+    width: 35px;
+    height: 38px;
+  }
+  .icon-u.icon-usability {
+    background-position: -83px 5px;
+    width: 30px;
+  }
+  .icon-u.icon-visual {
+    background-position: 6px 3px;
+  }
+  .icon-u.icon-architecture {
+    background-position: -29px 5px;
+    width: 29px;
+  }
+  .icon-u.icon-interaction {
+    background-position: -59px 3px;
+    width: 25px;
+  }
+}
+@media only screen and (max-device-width : 767px)  {
+  .container .featured span {
+    bottom: -15px;
+  }
+  .container .featured span.icon-ux {
+    width: 30px;
+    height: 30px;
+    margin-left: -18px;
+    background: url(../img/ux.svg) no-repeat 0 0;
+    background-size: 30px auto;
+  }
+  .icon-u {
+    left: 50%!important;
+    margin-left: -17px;
+    top: -25px;
+  }
+}
+/* Smartphone Landscape */
+@media only screen and (min-width : 321px) and (max-width : 568px)  {
+  .container {
+    width: 480px;
+  }
+}

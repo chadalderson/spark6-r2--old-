@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Spark6</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/all.css" rel="stylesheet" media="screen">
+    <link href="css/contact.css" rel="stylesheet" media="screen">
+    
+    <script type="text/javascript" src="//use.typekit.net/jgg4bxu.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>    
+    <script type="text/javascript" 
+src="http://maps.google.com/maps/api/js?sensor=false&amp;language=en"></script>
+    <!--[if lt IE 9]>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    
+    <div class="container">
+          
+      <div id="header">
+        <!-- Static navbar -->
+        <div class="navbar navbar-default" role="navigation">
+          
+          <div class="navbar-header">
+            <button type="button"id="openMenu"  class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          
+          <a id="logo" href="#" class="">
+            <span class="spark"></span>
+            <p class="text">Spark6</p>
+          </a><!-- /#logo -->
+
+          <div class="navbar-collapse collapse">
+            <ul id="nav" class="nav nav-pills nav-justified">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Work</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+
+        </div><!--/.navbar -->
+      </div><!-- /#header-->
+
+      <div class="jumbotron featured contact">
+        <img src="img/header-contact.jpg" alt="Contact Us">
+        <img src="img/header-contact-mobile.jpg" class="mobile-header" alt="Enterprise Gameification">
+        <h1 class="text-center">Contact Us</h1>
+      </div><!-- /.featured -->
+
+      <div id="contact-page" class="row">
+        <div class="left-col">
+          <form id="contactForm" role="form">
+            <div class="form-group">
+              <p>
+                <label for="name">Your Name</label>
+                <input type="text" class="form-control" id="name">
+              </p>
+            </div>
+            <div class="form-group">
+              <p>
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email">
+              </p>
+            </div>
+            <div class="form-group hideTablet">
+              <p>
+                <label for="company">Company</label>
+                <input type="text" class="form-control" id="company">
+              </p>
+            </div>
+            <div class="form-group hideTablet">
+              <p>
+                <label for="url">Website</label>
+                <input type="url" class="form-control" id="url" >
+              </p>
+            </div>
+            <div class="form-group hideTablet">
+              <p>
+                <label for="phone">Phone</label>
+                <input type="tel" class="form-control" id="phone" >
+              </p>
+            </div>
+            <div class="form-group">
+              <p class="textarea">
+                <label for="message">Message</label>
+                <textarea class="form-control" id="message" rows="5" ></textarea>
+              </p>
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+            <p class="instructions">Unlock the <strong>First Contact</strong> Achievement!</p>
+          </form>
+        </div><!-- /.left-col -->
+        <div class="right-col">
+          <div class="google-map-canvas">
+            <div id="gmap"></div>
+          </div>
+          <div class="bgred">
+            <address>
+              <span class="spark-white"></span>
+              <strong>Spark6 Inc.</strong><br>
+              1415 10th Street STE 2<br>
+              Santa Monica, California 90401
+            </address>
+            <div class="contact-email">
+              <strong>Sales</strong>
+              <p>sales@spark6.com</p>
+            </div>
+            <div class="contact-email last">
+              <strong>Support</strong>
+              <p>support@spark6.com</p>
+            </div>
+            <div class="clearfix"></div>
+            <div class="contact-email">
+              <strong>Careers</strong>
+              <p>careers@spark6.com</p>
+            </div>
+            <div class="contact-email last">
+              <strong>Accounting</strong>
+              <p>accounting@spark6.com</p>
+            </div>
+            <div class="clearfix"></div>
+
+            <ul class="social-nav">
+              <li><a href="#" class="linkedin"><span>LinkedIn</span></a></li>
+              <li><a href="#" class="facebook"><span>Facebook</span></a></li>
+              <li><a href="#" class="pinterest"><span>Pinterest</span></a></li>
+            </ul>
+
+          </div>
+        </div><!-- /.right-col -->
+        <div class="clearfix"></div>
+      </div><!-- /#contact-page -->
+
+      <h3 class="subheading text-center">More Great Services.</h3>
+
+
+      <div id="nav-services" class="row">
+        <a href="#" class="thumbnail mobile col-sm-4 col-xs-6">
+          <h4>Mobile <br/>first</h4>
+          <img src="img/thumb-mobile.jpg" alt="Mobile" />
+          <div class="red-overlay">
+            <div class="diamond"></div>
+            <span class="icon-mobile"></span>
+          </div>
+        </a>
+        <a href="#" class="thumbnail cms col-sm-4 col-xs-6">
+          <h4>Enterprise <br/>CMS</h4>
+          <img src="img/thumb-cms.jpg" alt="CMS" />
+          <div class="red-overlay">
+            <div class="diamond"></div>
+            <span class="icon-cms"></span>
+          </div>
+        </a>
+        <a href="#" class="thumbnail ux col-sm-4 col-xs-6">
+          <h4>User <br/>Experience</h4>
+          <img src="img/thumb-ux.jpg" alt="UX" />
+          <div class="red-overlay">
+            <div class="diamond"></div>
+            <span class="icon-ux"></span>
+          </div>
+        </a>
+        <a href="#" class="thumbnail enterprise hidden col-sm-4 col-xs-6">
+          <h4>Enterprise <br/>Gameification</h4>
+          <img src="img/thumb-enterprise.jpg" alt="Enterprise" />
+          <div class="red-overlay">
+            <div class="diamond"></div>
+            <span class="icon-enterprise"></span>
+          </div>
+        </a>
+         <a href="#" class="thumbnail cms  col-sm-4 col-xs-6">
+          <h4>Digital <br/>Marketing</h4>
+          <img src="img/thumb-marketing.jpg" alt="Marketing" />
+          <div class="red-overlay">
+            <div class="diamond"></div>
+            <span class="icon-marketing"></span>
+          </div>
+        </a>
+        <a href="#" class="thumbnail video col-sm-4 col-xs-6">
+          <h4>Video <br/>Production</h4>
+          <img src="img/thumb-video.jpg" alt="Video" />
+          <div class="red-overlay">
+            <div class="diamond"></div>
+            <span class="icon-video"></span>
+          </div>
+        </a>
+        
+      </div><!--/#nav-services -->
+
+      <div id="footer">
+        <p class="pull-left copyright">&copy; 2013 SPARK6. All Rights Reserved.</p>
+        <p class="pull-right footer-nav"><a href="#">Facebook</a> <a href="#">LinkedIn</a></p>
+        <div class="clearfix"></div>
+      </div><!-- /#footer -->
+    
+    </div><!-- /.container -->
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="holder/holder.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

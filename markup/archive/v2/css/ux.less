@@ -1,0 +1,120 @@
+/* UX CSS Styles */
+@import "global.less";
+
+.container .featured{
+	span{
+		position:absolute;
+		left:50%;
+		bottom:-23px;
+		z-index:105;
+
+		&.icon-ux{
+			width:42px;
+			height:42px;
+			margin-left:-(47px/2);
+			background:url(../img/ux.svg) no-repeat 0 0 ;
+			background-size:42px auto;		
+		}
+	}
+}
+
+.ie8 .container .featured span{
+	&.icon-ux{
+		background:url(../img/ux.png) no-repeat 0 0 ;
+	}
+}
+
+.ie8 .icon-u{
+	background:url(../img/sprite-ux.png) no-repeat 0 0;
+}
+
+.icon-u{
+	background:url(../img/sprite-ux.svg) no-repeat 0 0;
+	position:absolute;
+	left:-36px;
+	top:18px;
+	background-size:160px auto;
+	width:35px; height:38px;
+
+	&.icon-visual{
+		width:40px;
+		left:-40px;
+		background-position:0 0;
+	}
+
+	&.icon-interaction{
+		background-position:-90px 0;
+	}
+
+	&.icon-architecture{
+		background-position:-48px 0;
+	}
+
+	&.icon-usability{
+		background-position:-125px 0;
+	}
+}
+
+
+@media @tabletPortrait{
+	.icon-u{
+		background:url(../img/sprite-ux.svg) no-repeat 0 0;
+		position:absolute;
+		left:-36px;
+		top:14px;
+		background-size:110px auto;
+		width:35px; height:38px;
+
+		&.icon-usability{
+			background-position:-83px 5px;
+			width:30px;
+			
+		}
+
+		&.icon-visual{
+			background-position:6px 3px;
+		}
+
+		&.icon-architecture{
+			background-position:-29px 5px;
+			width:29px;
+		}
+
+		&.icon-interaction{
+			background-position:-59px 3px;
+			width:25px;
+		}
+	}
+
+}
+
+@media @smartphone{
+	
+	.container .featured{
+		span{
+			bottom:-15px;
+			&.icon-ux{
+				width:30px;
+				height:30px;
+				margin-left:-18px;
+				background:url(../img/ux.svg) no-repeat 0 0 ;
+				background-size:30px auto;		
+			}
+		}
+	}	
+
+	.icon-u{
+		left:50%!important;
+		margin-left:-17px;
+		top:-25px;
+	}
+}
+
+/* Smartphone Landscape */
+@media @smartphoneLandscape{
+	
+	.container{
+		width:480px;
+	}
+
+}

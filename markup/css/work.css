@@ -1,0 +1,416 @@
+/* Work CSS Styles */
+.container .jumbotron.work {
+  margin-bottom: 0;
+}
+#work-page .caption {
+  position: absolute;
+}
+#work-page .caption h2 {
+  color: #ff3000;
+  font-family: "franklin-gothic-urw", Helvetica, sans-serif;
+  font-weight: 900;
+  font-size: 24px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+#work-page .caption p {
+  font-size: 14px;
+  line-height: 22px;
+  color: #575656;
+}
+#work-page .ipad-box {
+  position: relative;
+  margin-bottom: 130px;
+}
+#work-page .ipad-box .caption {
+  bottom: 101px;
+  left: 90px;
+  z-index: 90;
+  width: 250px;
+}
+#work-page .ipad-box:after {
+  content: '';
+  z-index: 89;
+  width: 7px;
+  height: 213px;
+  background: url(../img/bullet.png) repeat-y 0 -5px;
+  position: absolute;
+  bottom: -135px;
+  left: 50%;
+  margin-left: -3px;
+}
+#work-page .iphone-box {
+  position: relative;
+  margin-bottom: 120px;
+}
+#work-page .iphone-box .caption {
+  top: 260px;
+  right: 95px;
+  z-index: 90;
+  width: 250px;
+}
+#work-page .iphone-box:after {
+  content: '';
+  z-index: 89;
+  width: 7px;
+  height: 213px;
+  background: url(../img/bullet.png) repeat-y 0 -5px;
+  position: absolute;
+  bottom: -135px;
+  left: 50%;
+  margin-left: -3px;
+}
+#work-page .ebay-box {
+  position: relative;
+  margin-bottom: 195px;
+}
+#work-page .ebay-box .caption {
+  left: 85px;
+  bottom: 110px;
+  z-index: 90;
+  width: 250px;
+}
+#work-page .ebay-box:after {
+  content: '';
+  z-index: 89;
+  width: 7px;
+  height: 103px;
+  background: url(../img/bullet.png) repeat-y 0 -5px;
+  position: absolute;
+  bottom: -125px;
+  left: 50%;
+  margin-left: -3px;
+}
+#work-page h3.work-heading {
+  color: #c1c1c1;
+  font-family: "gotham-thin", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 62px;
+}
+#work-page #work-thumbs {
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-top: 80px;
+  margin-bottom: 85px;
+  position: relative;
+  /*
+		& *{
+			transition:all .9s ease-in-out; 
+		    -o-transition:all .9s ease-in-out; 
+		    -moz-transition:all .9s ease-in-out; 
+		    -webkit-transition:all .9s ease-in-out;			
+		}
+*/
+
+}
+#work-page #work-thumbs .isotope-item {
+  width: 32.6%;
+  float: left;
+}
+#work-page #work-thumbs .isotope-item img {
+  display: block;
+  width: 100%;
+}
+#work-page #work-thumbs .col-md-4 {
+  padding: 0;
+}
+#work-page #work-thumbs a {
+  display: block;
+}
+#work-page #work-thumbs a img {
+  width: 100%;
+}
+.isotope,
+.isotope .isotope-item {
+  /* change duration value to whatever you like */
+
+  -webkit-transition-duration: 0.8s;
+  -moz-transition-duration: 0.8s;
+  -ms-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
+  transition-duration: 0.8s;
+}
+.isotope {
+  -webkit-transition-property: height;
+  -moz-transition-property: height;
+  -ms-transition-property: height;
+  -o-transition-property: height;
+  transition-property: height;
+}
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+  -moz-transition-property: -moz-transform, opacity;
+  transition-property: transform, opacity;
+}
+@media only screen and (max-width : 769px) {
+  #work-page .caption {
+    position: relative;
+    top: auto!important;
+    left: auto!important;
+    bottom: auto!important;
+    right: auto!important;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%!important;
+  }
+  #work-page .ipad-box::after,
+  #work-page .iphone-box::after,
+  #work-page .ebay-box::after {
+    width: 7px;
+    height: 50px;
+    background: url(../img/dot-tablet.jpg) repeat-y 0 0;
+    background-size: 7px auto;
+    position: absolute;
+    bottom: -85px;
+    left: 50%;
+    margin-left: -3px;
+  }
+  #work-page .ebay-box {
+    margin-bottom: 100px;
+  }
+  #work-page h3.work-heading {
+    font-size: 26px;
+  }
+  #work-page #work-thumbs {
+    /*padding-left:0;
+  			padding-right:0;*/
+  
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+  .no-touch #work-page #work-thumbs .isotope-item {
+    width: 47.5%;
+    float: left;
+  }
+  .no-touch #work-page #work-thumbs .isotope-item img {
+    display: block;
+    width: 100%;
+  }
+}
+@media only screen and (min-width : 768px) and (max-width : 1025px) {
+  #work-page .caption h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  #work-page .ipad-box {
+    margin-bottom: 130px;
+  }
+  #work-page .ipad-box .caption {
+    bottom: 25px;
+    left: 35px;
+    z-index: 90;
+    width: 250px;
+  }
+  #work-page .ipad-box::after {
+    width: 11px;
+    height: 64px;
+    background: url(../img/dot-tablet.jpg) repeat-y 0 0;
+    background-size: 11px auto;
+    position: absolute;
+    bottom: -85px;
+    left: 50%;
+    margin-left: -6px;
+  }
+  #work-page .iphone-box .caption {
+    right: 20px;
+    top: 150px;
+  }
+  #work-page .iphone-box::after {
+    width: 11px;
+    height: 64px;
+    background: url(../img/dot-tablet.jpg) repeat-y 0 0;
+    background-size: 11px auto;
+    position: absolute;
+    bottom: -85px;
+    left: 50%;
+    margin-left: -6px;
+  }
+  #work-page .ebay-box .caption {
+    left: 25px;
+    bottom: 70px;
+  }
+  #work-page .ebay-box::after {
+    width: 11px;
+    height: 64px;
+    background: url(../img/dot-tablet.jpg) repeat-y 0 0;
+    background-size: 11px auto;
+    position: absolute;
+    bottom: -85px;
+    left: 50%;
+    margin-left: -6px;
+  }
+  #work-page h3.work-heading {
+    font-size: 42px;
+  }
+  #work-page #work-thumbs .isotope-item {
+    width: 24.2%;
+    float: left;
+  }
+  #work-page #work-thumbs .isotope-item img {
+    display: block;
+    width: 100.6%!important;
+  }
+}
+@media only screen and (min-width : 1024px) and (max-width : 1200px) {
+  #work-page #work-thumbs .isotope-item {
+    width: 24.4%;
+    float: left;
+  }
+  #work-page #work-thumbs .isotope-item img {
+    display: block;
+    width: 100%;
+  }
+}
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+  #work-page .caption h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  #work-page .ipad-box {
+    margin-bottom: 130px;
+  }
+  #work-page .ipad-box .caption {
+    bottom: 25px;
+    left: 35px;
+    z-index: 90;
+    width: 250px;
+  }
+  #work-page .ipad-box::after {
+    width: 11px;
+    height: 64px;
+    background: url(../img/dot-tablet.jpg) repeat-y 0 0;
+    background-size: 11px auto;
+    position: absolute;
+    bottom: -85px;
+    left: 50%;
+    margin-left: -6px;
+  }
+  #work-page .iphone-box .caption {
+    right: 20px;
+    top: 150px;
+  }
+  #work-page .iphone-box::after {
+    width: 11px;
+    height: 64px;
+    background: url(../img/dot-tablet.jpg) repeat-y 0 0;
+    background-size: 11px auto;
+    position: absolute;
+    bottom: -85px;
+    left: 50%;
+    margin-left: -6px;
+  }
+  #work-page .ebay-box .caption {
+    left: 25px;
+    bottom: 70px;
+  }
+  #work-page .ebay-box::after {
+    width: 11px;
+    height: 64px;
+    background: url(../img/dot-tablet.jpg) repeat-y 0 0;
+    background-size: 11px auto;
+    position: absolute;
+    bottom: -85px;
+    left: 50%;
+    margin-left: -6px;
+  }
+  #work-page h3.work-heading {
+    font-size: 42px;
+  }
+}
+@media only screen and (max-device-width : 767px)  {
+  #work-page .caption {
+    position: relative;
+    top: auto!important;
+    left: auto!important;
+    bottom: auto!important;
+    right: auto!important;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%!important;
+  }
+  #work-page .ipad-box::after,
+  #work-page .iphone-box::after,
+  #work-page .ebay-box::after {
+    width: 7px;
+    height: 50px;
+    background: url(../img/dot-tablet.jpg) repeat-y 0 0;
+    background-size: 7px auto;
+    position: absolute;
+    bottom: -85px;
+    left: 50%;
+    margin-left: -3px;
+  }
+  #work-page .ebay-box {
+    margin-bottom: 100px;
+  }
+  #work-page h3.work-heading {
+    font-size: 26px;
+  }
+  #work-page #work-thumbs {
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+  #work-page #work-thumbs .isotope-item {
+    width: 50%;
+    float: left;
+  }
+  #work-page #work-thumbs .isotope-item img {
+    display: block;
+    width: 100%;
+  }
+}
+/* Smartphone Landscape */
+@media only screen and (min-width : 321px) and (max-width : 568px)  {
+  .container {
+    width: 480px;
+  }
+  #work-page #work-thumbs .isotope-item {
+    width: 50%;
+    float: left;
+  }
+  #work-page #work-thumbs .isotope-item img {
+    display: block;
+    width: 100%;
+  }
+}
+@media only screen and (max-width : 506px) {
+  .no-touch #work-page #work-thumbs .isotope-item {
+    width: 47%;
+    float: left;
+  }
+}
+/* Smaller Breakpoints */
+@media only screen and (max-width : 400px) {
+  .no-touch #work-page #work-thumbs .isotope-item {
+    width: 45%;
+    float: left;
+  }
+}
+@media only screen and (max-width : 240px) {
+  .no-touch #work-page #work-thumbs .isotope-item {
+    width: 43%;
+    float: left;
+  }
+}
+@media only screen and (max-width : 170px) {
+  .no-touch #work-page #work-thumbs .isotope-item {
+    width: 41%;
+    float: left;
+  }
+}
+@media only screen and (max-width : 135px) {
+  .no-touch #work-page #work-thumbs .isotope-item {
+    width: 38%;
+    float: left;
+  }
+}
+@media only screen and (max-width : 100px) {
+  .no-touch #work-page #work-thumbs .isotope-item {
+    width: 36%;
+    float: left;
+  }
+}

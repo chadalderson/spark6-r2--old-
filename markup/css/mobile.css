@@ -1,0 +1,92 @@
+/* Mobile CSS Styles */
+.container .featured span {
+  position: absolute;
+  left: 50%;
+  bottom: -23px;
+  z-index: 105;
+}
+.container .featured span.icon-mobile {
+  width: 42px;
+  height: 42px;
+  margin-left: -11px;
+  background: url(../img/mobile.svg) no-repeat 0 0;
+  background-size: auto 42px;
+}
+.ie8 .container .featured span.icon-mobile {
+  background: url(../img/mobile.png) no-repeat 0 0;
+}
+.ie8 .icon-m {
+  background: url(../img/sprite-mobile.png) no-repeat 0 0;
+}
+.icon-m {
+  background: url(../img/sprite-mobile.svg) no-repeat 0 0;
+  position: absolute;
+  left: -36px;
+  top: 18px;
+  background-size: 160px auto;
+  width: 35px;
+  height: 38px;
+}
+.icon-m.icon-grid {
+  background-position: 0 0;
+}
+.icon-m.icon-queries {
+  background-position: -39px 0;
+}
+.icon-m.icon-fluid {
+  background-position: -82px 0;
+}
+.icon-m.icon-responsive {
+  background-position: -123px 0;
+}
+.ie8 .icon-m.icon-responsive {
+  background-position: -125px 0;
+}
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+  .icon-m {
+    background: url(../img/sprite-mobile.svg) no-repeat 0 0;
+    position: absolute;
+    left: -36px;
+    top: 14px;
+    background-size: 110px auto;
+    width: 35px;
+    height: 38px;
+  }
+  .icon-m.icon-responsive {
+    background-position: -80px 5px;
+  }
+  .icon-m.icon-grid {
+    background-position: 9px 3px;
+  }
+  .icon-m.icon-queries {
+    background-position: -22px 5px;
+    width: 34px;
+  }
+  .icon-m.icon-fluid {
+    background-position: -52px 3px;
+    width: 32px;
+  }
+}
+@media only screen and (max-device-width : 767px)  {
+  .container .featured span {
+    bottom: -16px;
+  }
+  .container .featured span.icon-cms {
+    width: 35px;
+    height: 35px;
+    margin-left: -10px;
+    background: url(../img/mobile.svg) no-repeat 0 0;
+    background-size: auto 35px;
+  }
+  .icon-m {
+    left: 50%;
+    margin-left: -17px;
+    top: -25px;
+  }
+}
+/* Smartphone Landscape */
+@media only screen and (min-width : 321px) and (max-width : 568px)  {
+  .container {
+    width: 480px;
+  }
+}

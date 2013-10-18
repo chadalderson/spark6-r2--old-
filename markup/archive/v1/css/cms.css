@@ -1,0 +1,91 @@
+/* CMS CSS Styles */
+.container .featured span {
+  position: absolute;
+  left: 50%;
+  bottom: -20px !important;
+  z-index: 105;
+}
+.container .featured span.icon-cms {
+  width: 42px;
+  height: 42px;
+  margin-left: -21px;
+  background: url(../img/cms.svg) no-repeat 0 0;
+  background-size: 42px auto;
+}
+.ie8 .container .featured span.icon-cms {
+  background: url(../img/cms.png) no-repeat 0 0;
+}
+.ie8 .icon-c {
+  background: url(../img/sprite-cms.png) no-repeat 0 0;
+}
+.icon-c {
+  background: url(../img/sprite-cms.svg) no-repeat 0 0;
+  position: absolute;
+  left: -36px;
+  top: 16px;
+  background-size: 160px auto;
+  width: 35px;
+  height: 38px;
+}
+.icon-c.icon-drupal {
+  background-position: 0 0;
+}
+.icon-c.icon-magento {
+  background-position: -37px 0;
+}
+.icon-c.icon-ruby {
+  background-position: -75px 0;
+}
+.icon-c.icon-zend {
+  width: 50px;
+  left: -46px;
+  background-position: -110px 0;
+}
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+  .icon-c {
+    background: url(../img/sprite-cms.svg) no-repeat 0 0;
+    position: absolute;
+    left: -36px;
+    top: 14px;
+    background-size: 110px auto;
+    width: 35px;
+    height: 38px;
+  }
+  .icon-c.icon-zend {
+    background-position: -71px 5px;
+  }
+  .icon-c.icon-drupal {
+    background-position: 11px 3px;
+  }
+  .icon-c.icon-magento {
+    background-position: -21px 5px;
+    width: 29px;
+  }
+  .icon-c.icon-ruby {
+    background-position: -46px 3px;
+    width: 25px;
+  }
+}
+@media only screen and (max-device-width : 767px)  {
+  .container .featured span {
+    bottom: -15px !important;
+  }
+  .container .featured span.icon-cms {
+    width: 30px;
+    height: 30px;
+    margin-left: -15px;
+    background: url(../img/cms.svg) no-repeat 0 0;
+    background-size: 30px auto;
+  }
+  .icon-c {
+    left: 50%!important;
+    margin-left: -17px;
+    top: -25px;
+  }
+}
+/* Smartphone Landscape */
+@media only screen and (min-width : 321px) and (max-width : 568px)  {
+  .container {
+    width: 480px;
+  }
+}

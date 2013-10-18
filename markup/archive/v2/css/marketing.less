@@ -1,0 +1,124 @@
+/* Marketing CSS Styles */
+@import "global.less";
+
+.container .featured{
+	span{
+		position:absolute;
+		left:50%;
+		bottom:-23px;
+		z-index:105;
+
+		&.icon-marketing{
+			width:42px;
+			height:42px;
+			margin-left:-(42px/2); margin-top:-(42px/2);
+			background:url(../img/marketing.svg) no-repeat 0 0 ;
+			background-size:42px auto;
+		}
+	}
+}
+
+.ie8 .container .featured span{
+	&.icon-marketing{
+		background:url(../img/marketing.png) no-repeat 0 0 ;
+	}
+}
+
+.ie8 .icon-m{
+	background:url(../img/sprite-marketing.png) no-repeat 0 0;
+}
+
+.icon-m{
+	background:url(../img/sprite-marketing.svg) no-repeat 0 0;
+	position:absolute;
+	left:-36px;
+	top:18px;
+	background-size:160px auto;
+	width:35px; height:38px;
+
+	&.icon-search{
+		background-position:-130px 0;
+	}
+
+	&.icon-event{
+		background-position:-2px 0;
+	}
+
+	&.icon-social{
+		background-position:-40px 0;
+	}
+
+	&.icon-local{
+		background-position:-85px 0;
+	}
+}
+
+.ie8 .icon-m.icon-event{
+	background-position:0 0;
+}
+
+
+
+@media @tabletPortrait{
+	.icon-m{
+		background:url(../img/sprite-marketing.svg) no-repeat 0 0;
+		position:absolute;
+		left:-36px;
+		top:14px;
+		background-size:110px auto;
+		width:35px; height:38px;
+
+		&.icon-search{
+			background-position:-85px 3px;
+		}
+
+		&.icon-event{
+			background-position:9px 3px;
+		}
+
+		&.icon-social{
+			background-position:-23px 3px;
+		}
+
+		&.icon-local{
+			background-position:-55px 3px;
+		}
+	}
+
+}
+
+@media @smartphone{
+	
+	.container .featured{
+		span{
+			position:absolute;
+			left:50%;
+			bottom:-14px;
+			z-index:105;
+
+			&.icon-marketing{
+				width:30px;
+				height:30px;
+				margin-left:-(30px/2); margin-top:-(30px/2);
+				background:url(../img/marketing.svg) no-repeat 0 0 ;
+				background-size:30px auto;
+			}
+		}
+	}
+
+	.icon-m{
+		left:50%;
+		margin-left:-17px;
+		top:-25px;
+	}
+
+}
+
+/* Smartphone Landscape */
+@media @smartphoneLandscape{
+	
+	.container{
+		width:480px;
+	}
+
+}

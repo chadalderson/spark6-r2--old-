@@ -1,0 +1,119 @@
+/* Mobile CSS Styles */
+@import "global.less";
+
+.container .featured{
+	span{
+		position:absolute;
+		left:50%;
+		bottom:-23px;
+		z-index:105;
+
+		&.icon-mobile{
+			width:42px;
+			height:42px;
+			margin-left:-(22px/2);
+			background:url(../img/mobile.svg) no-repeat 0 0 ;
+			background-size:auto 42px;			
+		}
+	}
+}
+
+.ie8 .container .featured span{
+	&.icon-mobile{
+		background:url(../img/mobile.png) no-repeat 0 0 ;
+	}
+}
+
+.ie8 .icon-m{
+	background:url(../img/sprite-mobile.png) no-repeat 0 0;
+}
+
+.icon-m{
+	background:url(../img/sprite-mobile.svg) no-repeat 0 0;
+	position:absolute;
+	left:-36px;
+	top:18px;
+	background-size:160px auto;
+	width:35px; height:38px;
+
+	&.icon-grid{
+		background-position:0 0;
+	}
+
+	&.icon-queries{
+		background-position:-39px 0;
+	}
+
+	&.icon-fluid{
+		background-position:-82px 0;
+	}
+
+	&.icon-responsive{
+		background-position:-123px 0;
+	}
+}
+
+.ie8 .icon-m.icon-responsive{
+	background-position:-125px 0;
+}
+
+
+@media @tabletPortrait{
+	.icon-m{
+		background:url(../img/sprite-mobile.svg) no-repeat 0 0;
+		position:absolute;
+		left:-36px;
+		top:14px;
+		background-size:110px auto;
+		width:35px; height:38px;
+
+		&.icon-responsive{
+			background-position:-80px 5px;
+		}
+
+		&.icon-grid{
+			background-position:9px 3px;
+		}
+
+		&.icon-queries{
+			background-position:-22px 5px;
+			width:34px;
+		}
+
+		&.icon-fluid{
+			background-position:-52px 3px;
+			width:32px;
+		}
+	}
+
+}
+
+@media @smartphone{
+	.container .featured{
+		span{
+			bottom:-16px;
+
+			&.icon-cms{
+				width:35px;
+				height:35px;
+				margin-left:-10px;
+				background:url(../img/mobile.svg) no-repeat 0 0 ;
+				background-size:auto 35px;			
+			}
+		}
+	}	
+	.icon-m{
+		left:50%;
+		margin-left:-17px;
+		top:-25px;
+	}	
+}
+
+/* Smartphone Landscape */
+@media @smartphoneLandscape{
+	
+	.container{
+		width:480px;
+	}
+
+}

@@ -1,0 +1,154 @@
+/* Enterprise CSS Styles */
+@import "global.less";
+
+.container .featured{
+	span{
+		position:absolute;
+		left:50%;
+		bottom:-25px;
+		z-index:105;
+
+		&.icon-enterprise{
+			width:42px;
+			height:42px;
+			margin-left:-20px;
+			background:url(../img/enterprise.svg) no-repeat 0 0 ;
+			background-size:42px auto;		
+		}
+	}
+}
+
+.ie8 .container .featured span{
+	&.icon-enterprise{
+		background:url(../img/enterprise.png) no-repeat 0 0 ;
+	}
+}
+
+.ie8 .icon-e{
+	background:url(../img/sprite-enterprise.png) no-repeat 0 0;
+}
+
+.icon-e{
+	background:url(../img/sprite-enterprise.svg) no-repeat 0 0;
+	position:absolute;
+	left:-36px;
+	top:18px;
+	background-size:260px auto;
+	width:40px; height:40px;
+
+	&.icon-revealing{
+		background-position:0 0;
+	}
+
+	&.icon-map{
+		background-position:-37px 0;
+	}
+
+	&.icon-measure{
+		background-position:-84px 0;
+	}
+
+	&.icon-rewards{
+		background-position:-130px 0;
+	}
+
+	&.icon-game{
+		background-position:-173px 0;
+	}
+
+	&.icon-refine{
+		background-position:-222px 0;
+	}	
+}
+
+@media @smBreakpoint{
+	.no-touch{
+		.container{
+			.featured{
+				h1{
+					line-height:38px;
+					margin-top:-50px;
+
+					&:after{
+						bottom:-45px;
+					}
+				}
+			}
+		}	
+	}
+}
+
+@media @tabletPortrait{
+	.icon-e{
+		background:url(../img/sprite-enterprise.svg) no-repeat 0 0;
+		position:absolute;
+		left:-36px;
+		top:12px;
+		background-size:200px auto;
+		width:35px; height:38px;
+
+		&.icon-revealing{
+			background-position:11px 3px;
+		}
+
+		&.icon-map{
+			background-position:-27px 5px;
+		}
+
+		&.icon-measure{
+			background-position:-60px 3px;
+		}
+
+		&.icon-rewards{
+			background-position:-95px 5px;
+		}
+
+		&.icon-game{
+			background-position:-130px 5px;
+		}
+
+		&.icon-refine{
+			background-position:-167px 5px;
+		}	
+
+	}
+
+}
+
+@media @smartphone{
+	
+	.container .featured{
+		h1{
+			top:40%;
+			line-height:23px;
+			&::after{
+				bottom:-20px;
+			}
+		}
+		span{
+			bottom:-20px;
+			&.icon-enterprise{
+				width:30px;
+				height:30px;
+				margin-left:-15px;
+				background:url(../img/enterprise.svg) no-repeat 0 0 ;
+				background-size:30px auto;		
+			}
+		}
+	}	
+
+	.icon-e{
+		left:50%;
+		margin-left:-17px;
+		top:-25px;
+	}
+}
+
+/* Smartphone Landscape */
+@media @smartphoneLandscape{
+	
+	.container{
+		width:480px;
+	}
+
+}

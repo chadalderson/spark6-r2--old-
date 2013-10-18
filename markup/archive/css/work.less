@@ -1,0 +1,243 @@
+/* Work CSS Styles */
+@import "global.less";
+
+.container .jumbotron{
+	&.work{
+		margin-bottom:0;
+	}
+}
+
+#work-page{
+
+	.caption{
+		position:absolute;
+
+		h2{
+			color:#ff3000;
+			.franklinbold(24px);
+			text-transform:uppercase;
+			margin-bottom:25px;
+		}
+
+		p{
+			font-size:14px;
+			line-height:22px;
+			color:#575656;
+		}
+	}
+
+	.ipad-box{
+		position:relative;
+		margin-bottom:130px;
+
+		.caption{
+			bottom:101px;
+			left:90px;
+			z-index:90;
+			width:250px;
+		}
+
+		&:after{
+			content:'';
+			z-index:89;
+			width:7px;
+			height:213px;
+			background:url(../img/bullet.png) repeat-y 0 -5px;
+			position:absolute;
+			bottom:-135px; left:50%;
+			margin-left:-3px;
+		}
+	}	
+
+	.iphone-box{
+		position:relative;
+		margin-bottom:120px;
+
+		.caption{
+			top:260px;
+			right:95px;
+			z-index:90;
+			width:250px;
+		}
+
+		&:after{
+			content:'';
+			z-index:89;
+			width:7px;
+			height:213px;
+			background:url(../img/bullet.png) repeat-y 0 -5px;
+			position:absolute;
+			bottom:-135px; left:50%;
+			margin-left:-3px;
+		}
+	}
+
+	.ebay-box{
+		position:relative;
+		margin-bottom:195px;
+
+		.caption{
+			left:85px;
+			bottom:110px;
+			z-index:90;
+			width:250px;
+		}
+
+		&:after{
+			content:'';
+			z-index:89;
+			width:7px;
+			height:103px;
+			background:url(../img/bullet.png) repeat-y 0 -5px;
+			position:absolute;
+			bottom:-125px; left:50%;
+			margin-left:-3px;
+		}
+
+	}
+
+	h3.work-heading{
+		color:#c1c1c1;
+		.gothamthin(62px);
+	}
+
+	#work-thumbs{
+		padding-left:12px;
+		padding-right:12px;
+		margin-top:80px;
+		margin-bottom:85px;
+
+		.col-md-4{
+			padding:0;
+		}
+
+		a{
+			display:block;
+			img{
+				width:100%;
+			}
+		}
+	}
+}
+
+@media @tabletPortrait{
+	#work-page{
+
+		.caption{
+
+			h2{
+				font-size:20px;
+				margin-bottom:15px;
+			}
+
+		}
+
+		.ipad-box{
+			margin-bottom:130px;
+
+			.caption{
+				bottom:25px;
+				left:35px;
+				z-index:90;
+				width:250px;
+			}
+
+			&::after{
+				width: 11px;
+				height: 64px;
+				background: url(../img/dot-tablet.jpg) repeat-y 0 0;
+				background-size:11px auto;
+				position: absolute;
+				bottom: -85px;
+				left: 50%;
+				margin-left: -6px;
+			}
+		}	
+
+		.iphone-box{
+			
+			.caption{
+				right:20px;
+				top:150px;
+			}
+
+			&::after{
+				width: 11px;
+				height: 64px;
+				background: url(../img/dot-tablet.jpg) repeat-y 0 0;
+				background-size:11px auto;
+				position: absolute;
+				bottom: -85px;
+				left: 50%;
+				margin-left: -6px;
+			}
+		}
+
+		.ebay-box{
+
+			.caption{
+				left:25px;
+				bottom:70px;
+			}
+			&::after{
+				width: 11px;
+				height: 64px;
+				background: url(../img/dot-tablet.jpg) repeat-y 0 0;
+				background-size:11px auto;
+				position: absolute;
+				bottom: -85px;
+				left: 50%;
+				margin-left: -6px;
+			}
+		}
+
+		h3.work-heading{
+			font-size:42px;
+		}
+	}
+}
+
+@media @smartphone{
+
+	#work-page{
+		.caption{
+			position:relative;
+			top:auto!important; left:auto!important;
+			bottom:auto!important; right:auto!important;
+			text-align:center;
+			padding-left:20px;
+			padding-right:20px;
+			width:100%!important;
+		}
+
+		.ipad-box, .iphone-box, .ebay-box{
+			
+			&::after{
+				width: 7px;
+				height: 50px;
+				background: url(../img/dot-tablet.jpg) repeat-y 0 0;
+				background-size:7px auto;
+				position: absolute;
+				bottom: -85px;
+				left: 50%;
+				margin-left: -3px;
+			}
+		}
+
+		.ebay-box{
+			margin-bottom:100px;
+		}
+
+		h3.work-heading{
+			font-size:26px;
+		}
+
+		#work-thumbs{
+			padding-left:0;
+			padding-right:0;
+			margin-top:30px;
+			margin-bottom:15px;
+		}
+	}
+
+}

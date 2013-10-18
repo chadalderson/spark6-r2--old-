@@ -1,0 +1,99 @@
+/* Video CSS Styles */
+.container .featured span {
+  position: absolute;
+  left: 50%;
+  bottom: -30px;
+  z-index: 105;
+}
+.container .featured span.icon-video {
+  width: 42px;
+  height: 42px;
+  margin-left: -20px;
+  background: url(../img/video.svg) no-repeat 0 0;
+  background-size: 42px auto;
+}
+.ie8 .container .featured span.icon-video {
+  background: url(../img/video-icon.png) no-repeat 0 0;
+}
+.ie8 .icon-v {
+  background: url(../img/sprite-video.png) no-repeat 0 0;
+}
+.icon-v {
+  background: url(../img/sprite-video.svg) no-repeat 0 0;
+  position: absolute;
+  left: -36px;
+  top: 18px;
+  background-size: 240px auto;
+  width: 40px;
+  height: 40px;
+}
+.icon-v.icon-concept {
+  background-position: 0 0;
+}
+.icon-v.icon-voice {
+  background-position: -43px 0;
+}
+.icon-v.icon-motion {
+  background-position: -72px 0;
+}
+.icon-v.icon-story {
+  background-position: -110px 0;
+}
+.icon-v.icon-production {
+  background-position: -155px 0;
+}
+.icon-v.icon-sound {
+  background-position: -203px 0;
+}
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+  .icon-v {
+    background: url(../img/sprite-video.svg) no-repeat 0 0;
+    position: absolute;
+    left: -36px;
+    top: 12px;
+    background-size: 200px auto;
+    width: 35px;
+    height: 38px;
+  }
+  .icon-v.icon-concept {
+    background-position: 4px 3px;
+  }
+  .icon-v.icon-voice {
+    background-position: -33px 2px;
+  }
+  .icon-v.icon-motion {
+    background-position: -58px 3px;
+  }
+  .icon-v.icon-story {
+    background-position: -90px 5px;
+  }
+  .icon-v.icon-production {
+    background-position: -130px 5px;
+  }
+  .icon-v.icon-sound {
+    background-position: -168px 5px;
+  }
+}
+@media only screen and (max-device-width : 767px)  {
+  .container .featured span {
+    bottom: -20px;
+  }
+  .container .featured span.icon-video {
+    width: 30px;
+    height: 30px;
+    margin-left: -15px;
+    background: url(../img/video.svg) no-repeat 0 0;
+    background-size: 30px auto;
+  }
+  .icon-v {
+    left: 50%;
+    margin-left: -17px;
+    top: -25px;
+  }
+}
+/* Smartphone Landscape */
+@media only screen and (min-width : 321px) and (max-width : 568px)  {
+  .container {
+    width: 480px;
+  }
+}

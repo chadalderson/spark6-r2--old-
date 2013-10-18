@@ -1,0 +1,64 @@
+// Global Settings for CSS
+
+// Variables 
+@textcolor : #ccc;
+@globalfont : Helvetica, Arial, sans-serif;
+@bodybg : #f4f4f4;
+
+// Functions 
+.rounded-corners (@radius: 5px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  -ms-border-radius: @radius;
+  -o-border-radius: @radius;
+  border-radius: @radius;
+}
+
+.franklinbold (@fontsize: 14px){
+	font-family:"franklin-gothic-urw", Helvetica, sans-serif; 
+	font-weight: 900;
+	font-size:@fontsize;
+}
+
+.gothamthin (@fontsize: 14px){
+	font-family:"gotham-thin", Helvetica, sans-serif; 
+	font-weight: normal;
+	font-size:@fontsize;
+}
+
+.transition (@time: .5s){
+	-webkit-transition: all @time ease-in-out;
+	-moz-transition: all @time ease-in-out;
+	-o-transition: all @time ease-in-out;
+	transition: all @time ease-in-out;	
+}
+
+.bgcolortransition (@time: .5s){
+	-webkit-transition: background @time ease-in-out;
+	-moz-transition: background @time ease-in-out;
+	-o-transition: background @time ease-in-out;
+	transition: background @time ease-in-out;	
+}
+
+.fadethis(@time: .5s){
+	-webkit-transition: opacity @time ease-in-out;
+	-moz-transition: opacity @time ease-in-out;
+	-o-transition: opacity @time ease-in-out;
+	transition: opacity @time ease-in-out;		
+}
+
+// Media Queries Variables
+@smartphone: ~"only screen and (max-device-width : 767px) ";
+@smartphoneLandscape: ~"only screen and (min-width : 321px) and (max-width : 568px) ";
+@tablet: ~"only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape)";
+@tabletPortrait: ~"only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait)";
+@desktop: ~"only screen and (min-width : 1024px) and (max-width : 1200px)";
+@desktopXS: ~"only screen and (min-width : 768px) and (max-width : 1025px)";
+@desktopXXS: ~"only screen and (max-width : 769px)";
+@smBreakpoint: ~"only screen and (max-width : 506px)";
+// Smaller Breakpoints
+@desktopSmall_XL: ~"only screen and (max-width : 400px)";
+@desktopSmall_L: ~"only screen and (max-width : 240px)";
+@desktopSmall_M: ~"only screen and (max-width : 170px)";
+@desktopSmall_S: ~"only screen and (max-width : 135px)";
+@desktopSmall_XS: ~"only screen and (max-width : 100px)";
